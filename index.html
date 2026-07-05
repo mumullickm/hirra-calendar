@@ -1726,6 +1726,7 @@ function applyAll(){let p=0,s=0,d=0;document.querySelectorAll('.st').forEach(sel
 async function sync(){
  const base='https://raw.githubusercontent.com/mumullickm/hirra-ig-scheduler/main/';const s=new Set();
  try{const r=await (await fetch(base+'posted_reels.json?t='+Date.now(),{cache:'no-store'})).json();for(const k in r){if(r[k]&&(r[k].ig||r[k].fb))s.add(k);}}catch(e){}
+ try{const st=await (await fetch(base+'posted_statics.json?t='+Date.now(),{cache:'no-store'})).json();for(const k in st){if(st[k]&&(st[k].ig||st[k].fb))s.add(k);}}catch(e){}
  try{const p=await (await fetch(base+'posted.json?t='+Date.now(),{cache:'no-store'})).json();for(const x of p)s.add('flux-campaign-piece-'+String(x).padStart(2,'0'));}catch(e){}
  window.__posted=s;applyAll();
 }
