@@ -1,140 +1,1650 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Hirra — Content Studio</title>
+<meta name="robots" content="noindex,nofollow"><title>Hirra — Content Studio</title>
 <style>
 :root{--ink:#13343B;--mist:#EEF4F5;--slate:#8FA9B0;--card:#102b31;--line:#1c454e;}
-*{box-sizing:border-box}
-body{margin:0;background:#0d2429;color:var(--mist);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-header{padding:36px 30px 8px;max-width:1400px;margin:0 auto}
-h1{margin:0;font-size:28px;letter-spacing:.3px}
-.sub{color:var(--slate);margin-top:6px;font-size:14px;max-width:80ch;line-height:1.55}
-.stats{display:flex;gap:18px;flex-wrap:wrap;margin:18px 0 4px}
+*{box-sizing:border-box}body{margin:0;background:#0d2429;color:var(--mist);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+header{padding:36px 30px 8px;max-width:1500px;margin:0 auto}h1{margin:0;font-size:28px}
+.sub{color:var(--slate);margin-top:6px;font-size:14px;max-width:82ch;line-height:1.55}
+.stats{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 4px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
-.stat b{font-size:20px} .stat span{display:block;color:var(--slate);font-size:12px;margin-top:2px}
-.note{background:#123037;border:1px solid var(--line);border-left:3px solid #F59E0B;border-radius:10px;padding:14px 16px;margin:16px 0;font-size:13px;line-height:1.6;color:#cfe0e3;max-width:90ch}
-h2{padding:26px 30px 0;max-width:1400px;margin:0 auto;font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:var(--slate)}
-.wrap{max-width:1400px;margin:0 auto;padding:14px 30px 40px}
+.stat b{font-size:20px}.stat span{display:block;color:var(--slate);font-size:12px;margin-top:2px}
+.note{background:#123037;border:1px solid var(--line);border-left:3px solid #F59E0B;border-radius:10px;padding:14px 16px;margin:16px 0;font-size:13px;line-height:1.6;color:#cfe0e3;max-width:92ch}
+h2{padding:26px 30px 0;max-width:1500px;margin:0 auto;font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:var(--slate)}
+.wrap{max-width:1500px;margin:0 auto;padding:14px 30px 40px}
 .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-.vcard,.card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.vcard,.card{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
 .vcard video{width:100%;display:block;background:#000;aspect-ratio:4/5}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
 .card img{width:100%;display:block}
-figcaption{padding:11px 13px 14px;display:flex;flex-direction:column;gap:5px;font-size:13px}
-.k{font-size:10px;font-weight:800;letter-spacing:1.2px}
-.en{line-height:1.35} .meta{color:var(--slate);font-size:11px}
-footer{max-width:1400px;margin:0 auto;padding:20px 30px 60px;color:var(--slate);font-size:12px}
-a{color:#7fd3c7}
+figcaption{padding:11px 13px 14px;display:flex;flex-direction:column;gap:7px;font-size:13px}
+.k{font-size:10px;font-weight:800;letter-spacing:1.2px}.en{line-height:1.35;font-weight:600}
+.id{color:var(--slate);font-size:11px}
+textarea{width:100%;font-size:11px;line-height:1.45;font-family:inherit;color:#dbe8ea;background:#0c2429;border:1px solid var(--line);border-radius:8px;padding:8px;resize:vertical}
+button{align-self:flex-start;font-size:11px;font-weight:700;border:1px solid var(--line);background:#17414a;color:var(--mist);border-radius:20px;padding:5px 12px;cursor:pointer}
+button:active{background:#1f5a66}a{color:#7fd3c7}
+footer{max-width:1500px;margin:0 auto;padding:20px 30px 60px;color:var(--slate);font-size:12px}
 </style></head><body>
-<header>
-<h1>Hirra — Content Studio</h1>
-<div class="sub">Living dashboard for the Hirra content run. Nano Banana visuals + the bilingual pipeline (real shaped Arabic, هِرّة shadda preserved). Every asset passes the Brand OS pre-ship gate.</div>
+<header><h1>Hirra — Content Studio</h1>
+<div class="sub">Living content dashboard. Nano Banana visuals + bilingual pipeline (real shaped Arabic, هِرّة shadda). Every static carries its ground-rule caption (hook → insight → soft CTA → save → hashtags). Copy and post.</div>
 <div class="stats">
-<div class="stat"><b>20</b><span>Statics · 4:5</span></div>
-<div class="stat"><b>5</b><span>Videos · EN+AR VO</span></div>
-<div class="stat"><b>~$1.02</b><span>Nano Banana / $10</span></div>
-<div class="stat"><b>~1k</b><span>ElevenLabs credits / 30k</span></div>
+<div class="stat"><b>60</b><span>Statics · 4:5 · captioned</span></div>
+<div class="stat"><b>20</b><span>Videos · EN+AR VO</span></div>
+<div class="stat"><b>~$2</b><span>Nano Banana / $10</span></div>
+<div class="stat"><b>&lt;5k</b><span>ElevenLabs / 30k</span></div>
 </div>
-<div class="note"><b>Distribution plan.</b> Organic (page timeline): the bilingual assets below, one grid, both audiences. Paid (dark-post ads, geo-targeted): Arabic commercials → Gulf, English commercials → rest of world, so nothing contradicts on the public page.</div>
+<div class="note"><b>Distribution.</b> Organic (page timeline): the bilingual assets below. Paid (dark-post ads, geo-targeted): Arabic → Gulf, English → rest of world, so nothing contradicts on the public page. Reels captions are short by design (viewers rarely read them).</div>
 </header>
-<h2>Videos</h2>
-<div class="wrap"><div class="vgrid"><figure class="vcard"><video controls playsinline preload="metadata"
-   src="assets/videos/v1-master.mp4"></video>
-   <figcaption>Master line
-   <span class="meta">v1-master.mp4</span></figcaption></figure><figure class="vcard"><video controls playsinline preload="metadata"
-   src="assets/videos/v2-heat.mp4"></video>
-   <figcaption>Gulf heat safety
-   <span class="meta">v2-heat.mp4</span></figcaption></figure><figure class="vcard"><video controls playsinline preload="metadata"
-   src="assets/videos/v3-signs.mp4"></video>
-   <figcaption>Quiet early signs
-   <span class="meta">v3-signs.mp4</span></figcaption></figure><figure class="vcard"><video controls playsinline preload="metadata"
-   src="assets/videos/v4-privacy.mp4"></video>
-   <figcaption>Privacy & trust
-   <span class="meta">v4-privacy.mp4</span></figcaption></figure><figure class="vcard"><video controls playsinline preload="metadata"
-   src="assets/videos/v5-how.mp4"></video>
-   <figcaption>How it works
-   <span class="meta">v5-how.mp4</span></figcaption></figure></div></div>
-<h2>Statics</h2>
-<div class="wrap"><div class="grid"><figure class="card">
-      <img loading="lazy" src="assets/statics/s01.jpg" alt="s01">
-      <figcaption><span class="k" style="color:#F59E0B">CARE, NOT ALARM</span>
-      <span class="en">She hides the illness. Hirra reads the sign.</span>
-      <span class="meta">s01 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s02.jpg" alt="s02">
-      <figcaption><span class="k" style="color:#F43F5E">GULF SUMMER</span>
-      <span class="en">Your cat can't sweat like you can.</span>
-      <span class="meta">s02 · cat · alert</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s03.jpg" alt="s03">
-      <figcaption><span class="k" style="color:#F43F5E">HOT GROUND</span>
-      <span class="en">The tile looked fine. To her paws it was fire.</span>
-      <span class="meta">s03 · cat · alert</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s04.jpg" alt="s04">
-      <figcaption><span class="k" style="color:#F59E0B">SLOW INTRODUCTIONS</span>
-      <span class="en">A new cat isn't a light switch.</span>
-      <span class="meta">s04 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s05.jpg" alt="s05">
-      <figcaption><span class="k" style="color:#10B981">PRIVATE BY DESIGN</span>
-      <span class="en">Your cat's health isn't a highlight reel.</span>
-      <span class="meta">s05 · ground · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s06.jpg" alt="s06">
-      <figcaption><span class="k" style="color:#10B981">ASK HIRRA</span>
-      <span class="en">Before you post to the group chat, ask Hirra first.</span>
-      <span class="meta">s06 · cat · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s07.jpg" alt="s07">
-      <figcaption><span class="k" style="color:#10B981">LEARNS HER NORMAL</span>
-      <span class="en">You have a ring for your steps. She deserves one too.</span>
-      <span class="meta">s07 · cat · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s08.jpg" alt="s08">
-      <figcaption><span class="k" style="color:#F59E0B">A GENTLE NUDGE</span>
-      <span class="en">One thing came up. Not a diagnosis, a nudge.</span>
-      <span class="meta">s08 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s09.jpg" alt="s09">
-      <figcaption><span class="k" style="color:#10B981">A CALM READ</span>
-      <span class="en">Most days, this is what Hirra says.</span>
-      <span class="meta">s09 · cat · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s10.jpg" alt="s10">
-      <figcaption><span class="k" style="color:#F43F5E">TIME TO CALL</span>
-      <span class="en">When it's this colour, call your vet.</span>
-      <span class="meta">s10 · cat · alert</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s11.jpg" alt="s11">
-      <figcaption><span class="k" style="color:#F59E0B">WATCH, DON'T PANIC</span>
-      <span class="en">Not every hairball morning needs a vet trip.</span>
-      <span class="meta">s11 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s12.jpg" alt="s12">
-      <figcaption><span class="k" style="color:#10B981">LEARNS HER NORMAL</span>
-      <span class="en">You already understand how Hirra works.</span>
-      <span class="meta">s12 · ground · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s13.jpg" alt="s13">
-      <figcaption><span class="k" style="color:#10B981">NO ACCOUNT, OFFLINE</span>
-      <span class="en">Private by design.</span>
-      <span class="meta">s13 · ground · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s14.jpg" alt="s14">
-      <figcaption><span class="k" style="color:#10B981">THE HIRRA WAY</span>
-      <span class="en">Care, not alarm.</span>
-      <span class="meta">s14 · cat · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s15.jpg" alt="s15">
-      <figcaption><span class="k" style="color:#F59E0B">EARLY. QUIET. CALM.</span>
-      <span class="en">Catch the early signs.</span>
-      <span class="meta">s15 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s16.jpg" alt="s16">
-      <figcaption><span class="k" style="color:#10B981">HER NORMAL</span>
-      <span class="en">A baseline for your cat.</span>
-      <span class="meta">s16 · ground · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s17.jpg" alt="s17">
-      <figcaption><span class="k" style="color:#F59E0B">MULTI-CAT HOMES</span>
-      <span class="en">One profile per cat.</span>
-      <span class="meta">s17 · cat · watch</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s18.jpg" alt="s18">
-      <figcaption><span class="k" style="color:#F43F5E">GULF SUMMER</span>
-      <span class="en">Check the ground first.</span>
-      <span class="meta">s18 · cat · alert</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s19.jpg" alt="s19">
-      <figcaption><span class="k" style="color:#10B981">PRIVATE BY DESIGN</span>
-      <span class="en">Her normal, kept close.</span>
-      <span class="meta">s19 · ground · thriving</span></figcaption></figure><figure class="card">
-      <img loading="lazy" src="assets/statics/s20.jpg" alt="s20">
-      <figcaption><span class="k" style="color:#F59E0B">CARE, NOT ALARM</span>
-      <span class="en">Note the small things before they grow.</span>
-      <span class="meta">s20 · cat · watch</span></figcaption></figure></div></div>
-<footer>Unlisted internal tool · noindex. Previous FLUX calendar preserved at <a href="legacy-calendar.html">legacy-calendar.html</a>.</footer>
+<h2>Videos (20)</h2><div class="wrap"><div class="vgrid"><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v01-p7.mp4"></video>
+<figcaption><span class="en">v01-p7</span>
+<textarea readonly rows="2">Your cat can&#x27;t sweat like you can.  قطتك لا تتعرّق كما تتعرّقين.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v02-p10.mp4"></video>
+<figcaption><span class="en">v02-p10</span>
+<textarea readonly rows="2">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.  إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v03-p11.mp4"></video>
+<figcaption><span class="en">v03-p11</span>
+<textarea readonly rows="2">Before you post it to the group chat, ask Hirra first.  قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v04-p12.mp4"></video>
+<figcaption><span class="en">v04-p12</span>
+<textarea readonly rows="2">Not every hairball morning needs a vet trip.  ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v05-p20.mp4"></video>
+<figcaption><span class="en">v05-p20</span>
+<textarea readonly rows="2">A new cat isn&#x27;t a light switch.  القطة الجديدة ليست مفتاح إضاءة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v06-p21.mp4"></video>
+<figcaption><span class="en">v06-p21</span>
+<textarea readonly rows="2">Your cat&#x27;s health isn&#x27;t a highlight reel.  صحّة قطتك ليست عرضاً للمشاهدة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v07-p22.mp4"></video>
+<figcaption><span class="en">v07-p22</span>
+<textarea readonly rows="2">The ground she walks on can burn.  الأرض التي تمشي عليها قد تحرق.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v08-p23.mp4"></video>
+<figcaption><span class="en">v08-p23</span>
+<textarea readonly rows="2">Two myths about the indoor cat and her shots.  خرافتان حول القطة المنزلية ولقاحاتها.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v09-p24.mp4"></video>
+<figcaption><span class="en">v09-p24</span>
+<textarea readonly rows="2">You already understand how Hirra works.  أنتِ تفهمين بالفعل كيف تعمل هِرّة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v10-p25.mp4"></video>
+<figcaption><span class="en">v10-p25</span>
+<textarea readonly rows="2">You have a ring for your steps. She deserves one too.  لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v11-p26.mp4"></video>
+<figcaption><span class="en">v11-p26</span>
+<textarea readonly rows="2">“She never goes out, so she is safe.”  «هي لا تخرج أبدًا، إذًا هي بأمان.»
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v12-p27.mp4"></video>
+<figcaption><span class="en">v12-p27</span>
+<textarea readonly rows="2">The tile looked fine. To her paws it was fire.  بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v13-p15.mp4"></video>
+<figcaption><span class="en">v13-p15</span>
+<textarea readonly rows="2">Two things owners get wrong about cat breath.  أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v14-p16.mp4"></video>
+<figcaption><span class="en">v14-p16</span>
+<textarea readonly rows="2">She isn&#x27;t just slowing down with age.  هي لا تتباطأ مع التقدّم في العمر فحسب.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v15-p13.mp4"></video>
+<figcaption><span class="en">v15-p13</span>
+<textarea readonly rows="2">More water in the bowl isn&#x27;t always just the heat.  الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v16-mood-thriving.mp4"></video>
+<figcaption><span class="en">v16-mood-thriving</span>
+<textarea readonly rows="2">Most days, this is what Hirra says.  في أغلب الأيام، هذا ما تقوله هِرّة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v17-mood-watch.mp4"></video>
+<figcaption><span class="en">v17-mood-watch</span>
+<textarea readonly rows="2">One thing came up. Not a diagnosis, a nudge.  شيء واحد ظهر. ليس تشخيصاً، بل تنبيهاً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v18-mood-needscare.mp4"></video>
+<figcaption><span class="en">v18-mood-needscare</span>
+<textarea readonly rows="2">When it&#x27;s this color, call your vet.  حين يكون هذا هو اللون، اتصلي بطبيبك البيطري.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v19-master.mp4"></video>
+<figcaption><span class="en">v19-master</span>
+<textarea readonly rows="2">She hides the illness. Hirra reads the sign.  تخفي المرض. هِرّة تقرأ العلامة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure><figure class="vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v20-private.mp4"></video>
+<figcaption><span class="en">v20-private</span>
+<textarea readonly rows="2">Private by design.  خاصّة بالتصميم.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button></figcaption></figure></div></div>
+<h2>Statics (60) — caption included</h2><div class="wrap"><div class="grid"><figure class="card">
+<img loading="lazy" src="assets/statics/s01.jpg" alt="s01">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Your cat can&#x27;t sweat like you can.</span>
+<textarea readonly rows="4">Your cat can&#x27;t sweat like you can.
+
+She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قطتك لا تتعرّق كما تتعرّقين.
+
+تُبرّد نفسها باللهاث وعرق يسير من قدميها. لا يكفي هذا لصيف الخليج.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s01</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s02.jpg" alt="s02">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Warning signs: heavy panting, drooling, pale gums, wobbling, going quiet. Act now, don&#x27;t wait.</span>
+<textarea readonly rows="4">Your cat can&#x27;t sweat like you can.
+
+She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قطتك لا تتعرّق كما تتعرّقين.
+
+تُبرّد نفسها باللهاث وعرق يسير من قدميها. لا يكفي هذا لصيف الخليج.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s02</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s03.jpg" alt="s03">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.</span>
+<textarea readonly rows="4">Your cat can&#x27;t sweat like you can.
+
+She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قطتك لا تتعرّق كما تتعرّقين.
+
+تُبرّد نفسها باللهاث وعرق يسير من قدميها. لا يكفي هذا لصيف الخليج.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s03</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s04.jpg" alt="s04">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Catch the early signs.</span>
+<textarea readonly rows="4">Your cat can&#x27;t sweat like you can.
+
+She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قطتك لا تتعرّق كما تتعرّقين.
+
+تُبرّد نفسها باللهاث وعرق يسير من قدميها. لا يكفي هذا لصيف الخليج.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s04</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s05.jpg" alt="s05">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.</span>
+<textarea readonly rows="4">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
+
+Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
+
+القطط الذكور لديها مسلك أضيق. الانسداد يتحوّل خطراً بسرعة، خلال يوم أو يومين.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s05</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s06.jpg" alt="s06">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">This is exactly what Hirra&#x27;s daily litter check-in is built to catch early.</span>
+<textarea readonly rows="4">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
+
+Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
+
+القطط الذكور لديها مسلك أضيق. الانسداد يتحوّل خطراً بسرعة، خلال يوم أو يومين.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s06</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s07.jpg" alt="s07">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.</span>
+<textarea readonly rows="4">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
+
+Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
+
+القطط الذكور لديها مسلك أضيق. الانسداد يتحوّل خطراً بسرعة، خلال يوم أو يومين.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s07</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s08.jpg" alt="s08">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">She hides the illness. Hirra reads the sign.</span>
+<textarea readonly rows="4">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
+
+Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
+
+القطط الذكور لديها مسلك أضيق. الانسداد يتحوّل خطراً بسرعة، خلال يوم أو يومين.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s08</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s09.jpg" alt="s09">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Before you post it to the group chat, ask Hirra first.</span>
+<textarea readonly rows="4">Before you post it to the group chat, ask Hirra first.
+
+Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
+
+Hirra Plus. Free for 7 days. Catch the early signs.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
+
+كل مجموعة فيها المنشور نفسه: صورة غير واضحة، أربعون رداً، لا اثنان منها يتّفقان.
+
+هِرّة بلس. مجاناً لسبعة أيام. التقطي العلامات المبكرة.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s09</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s10.jpg" alt="s10">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Ask Hirra is different. It already knows her baseline, not a stranger&#x27;s guess.</span>
+<textarea readonly rows="4">Before you post it to the group chat, ask Hirra first.
+
+Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
+
+Hirra Plus. Free for 7 days. Catch the early signs.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
+
+كل مجموعة فيها المنشور نفسه: صورة غير واضحة، أربعون رداً، لا اثنان منها يتّفقان.
+
+هِرّة بلس. مجاناً لسبعة أيام. التقطي العلامات المبكرة.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s10</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s11.jpg" alt="s11">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Every cat group has the same post: a blurry photo, forty replies, no two agreeing.</span>
+<textarea readonly rows="4">Before you post it to the group chat, ask Hirra first.
+
+Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
+
+Hirra Plus. Free for 7 days. Catch the early signs.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
+
+كل مجموعة فيها المنشور نفسه: صورة غير واضحة، أربعون رداً، لا اثنان منها يتّفقان.
+
+هِرّة بلس. مجاناً لسبعة أيام. التقطي العلامات المبكرة.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s11</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s12.jpg" alt="s12">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Hirra Plus.</span>
+<textarea readonly rows="4">Before you post it to the group chat, ask Hirra first.
+
+Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
+
+Hirra Plus. Free for 7 days. Catch the early signs.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
+
+كل مجموعة فيها المنشور نفسه: صورة غير واضحة، أربعون رداً، لا اثنان منها يتّفقان.
+
+هِرّة بلس. مجاناً لسبعة أيام. التقطي العلامات المبكرة.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s12</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s13.jpg" alt="s13">
+<figcaption><span class="k" style="color:#F59E0B">TRUST</span>
+<span class="en">Not every hairball morning needs a vet trip.</span>
+<textarea readonly rows="4">Not every hairball morning needs a vet trip.
+
+Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
+
+Hirra runs this check every day. Against her own history. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
+
+وليس كل أسبوع هادئ لا شيء أيضاً. إليكِ كيف تُفرّقين بينهما.
+
+هِرّة تُجري هذا الفحص كل يوم. بناءً على تاريخها هي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s13</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s14.jpg" alt="s14">
+<figcaption><span class="k" style="color:#F59E0B">TRUST</span>
+<span class="en">Straining, not eating, hiding and unreachable? That&#x27;s a call today.</span>
+<textarea readonly rows="4">Not every hairball morning needs a vet trip.
+
+Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
+
+Hirra runs this check every day. Against her own history. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
+
+وليس كل أسبوع هادئ لا شيء أيضاً. إليكِ كيف تُفرّقين بينهما.
+
+هِرّة تُجري هذا الفحص كل يوم. بناءً على تاريخها هي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s14</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s15.jpg" alt="s15">
+<figcaption><span class="k" style="color:#F59E0B">TRUST</span>
+<span class="en">Eating, using the box, playing normally? Just watch. Nothing to do today.</span>
+<textarea readonly rows="4">Not every hairball morning needs a vet trip.
+
+Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
+
+Hirra runs this check every day. Against her own history. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
+
+وليس كل أسبوع هادئ لا شيء أيضاً. إليكِ كيف تُفرّقين بينهما.
+
+هِرّة تُجري هذا الفحص كل يوم. بناءً على تاريخها هي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s15</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s16.jpg" alt="s16">
+<figcaption><span class="k" style="color:#F59E0B">TRUST</span>
+<span class="en">Hirra runs this check every day.</span>
+<textarea readonly rows="4">Not every hairball morning needs a vet trip.
+
+Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
+
+Hirra runs this check every day. Against her own history. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
+
+وليس كل أسبوع هادئ لا شيء أيضاً. إليكِ كيف تُفرّقين بينهما.
+
+هِرّة تُجري هذا الفحص كل يوم. بناءً على تاريخها هي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s16</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s17.jpg" alt="s17">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">A new cat isn&#x27;t a light switch.</span>
+<textarea readonly rows="4">A new cat isn&#x27;t a light switch.
+
+Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
+
+One profile per cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+القطة الجديدة ليست مفتاح إضاءة.
+
+أغلب البيوت متعدّدة القطط تمرّ بتوتّر. العدوان في اللقاء الأول شائع، وليس فشلاً.
+
+ملفّ لكلّ قطة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s17</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s18.jpg" alt="s18">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Go slow, separate spaces first. Scent before sight, sight before contact.</span>
+<textarea readonly rows="4">A new cat isn&#x27;t a light switch.
+
+Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
+
+One profile per cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+القطة الجديدة ليست مفتاح إضاءة.
+
+أغلب البيوت متعدّدة القطط تمرّ بتوتّر. العدوان في اللقاء الأول شائع، وليس فشلاً.
+
+ملفّ لكلّ قطة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s18</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s19.jpg" alt="s19">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.</span>
+<textarea readonly rows="4">A new cat isn&#x27;t a light switch.
+
+Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
+
+One profile per cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+القطة الجديدة ليست مفتاح إضاءة.
+
+أغلب البيوت متعدّدة القطط تمرّ بتوتّر. العدوان في اللقاء الأول شائع، وليس فشلاً.
+
+ملفّ لكلّ قطة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s19</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s20.jpg" alt="s20">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">One profile per cat.</span>
+<textarea readonly rows="4">A new cat isn&#x27;t a light switch.
+
+Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
+
+One profile per cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+القطة الجديدة ليست مفتاح إضاءة.
+
+أغلب البيوت متعدّدة القطط تمرّ بتوتّر. العدوان في اللقاء الأول شائع، وليس فشلاً.
+
+ملفّ لكلّ قطة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s20</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s21.jpg" alt="s21">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Your cat&#x27;s health isn&#x27;t a highlight reel.</span>
+<textarea readonly rows="4">Your cat&#x27;s health isn&#x27;t a highlight reel.
+
+The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+صحّة قطتك ليست عرضاً للمشاهدة.
+
+التطبيقات الصاخبة تريد منشوراتك وإعلاناتك وبياناتك. هِرّة لا تريد شيئاً من ذلك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s21</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s22.jpg" alt="s22">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">No account. Works offline. Her numbers live on your phone, for you.</span>
+<textarea readonly rows="4">Your cat&#x27;s health isn&#x27;t a highlight reel.
+
+The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+صحّة قطتك ليست عرضاً للمشاهدة.
+
+التطبيقات الصاخبة تريد منشوراتك وإعلاناتك وبياناتك. هِرّة لا تريد شيئاً من ذلك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s22</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s23.jpg" alt="s23">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Health is quiet, private work. Not a follower count, not a performance.</span>
+<textarea readonly rows="4">Your cat&#x27;s health isn&#x27;t a highlight reel.
+
+The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+صحّة قطتك ليست عرضاً للمشاهدة.
+
+التطبيقات الصاخبة تريد منشوراتك وإعلاناتك وبياناتك. هِرّة لا تريد شيئاً من ذلك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s23</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s24.jpg" alt="s24">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Private by design.</span>
+<textarea readonly rows="4">Your cat&#x27;s health isn&#x27;t a highlight reel.
+
+The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+صحّة قطتك ليست عرضاً للمشاهدة.
+
+التطبيقات الصاخبة تريد منشوراتك وإعلاناتك وبياناتك. هِرّة لا تريد شيئاً من ذلك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s24</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s25.jpg" alt="s25">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">The ground she walks on can burn.</span>
+<textarea readonly rows="4">The ground she walks on can burn.
+
+Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
+
+Check the ground first. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الأرض التي تمشي عليها قد تحرق.
+
+بلاط الخليج ورصيفه في الصيف قد يبلغ حرارة تُبثّر الوسائد خلال ثوانٍ.
+
+افحصي الأرض أولاً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s25</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s26.jpg" alt="s26">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">A burn shows as limping, licking paws, dark or blistered pads, refusing to walk.</span>
+<textarea readonly rows="4">The ground she walks on can burn.
+
+Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
+
+Check the ground first. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الأرض التي تمشي عليها قد تحرق.
+
+بلاط الخليج ورصيفه في الصيف قد يبلغ حرارة تُبثّر الوسائد خلال ثوانٍ.
+
+افحصي الأرض أولاً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s26</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s27.jpg" alt="s27">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Hirra&#x27;s free emergency card walks you through first steps, offline, then to a vet.</span>
+<textarea readonly rows="4">The ground she walks on can burn.
+
+Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
+
+Check the ground first. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الأرض التي تمشي عليها قد تحرق.
+
+بلاط الخليج ورصيفه في الصيف قد يبلغ حرارة تُبثّر الوسائد خلال ثوانٍ.
+
+افحصي الأرض أولاً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s27</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s28.jpg" alt="s28">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Check the ground first.</span>
+<textarea readonly rows="4">The ground she walks on can burn.
+
+Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
+
+Check the ground first. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الأرض التي تمشي عليها قد تحرق.
+
+بلاط الخليج ورصيفه في الصيف قد يبلغ حرارة تُبثّر الوسائد خلال ثوانٍ.
+
+افحصي الأرض أولاً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s28</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s29.jpg" alt="s29">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Two myths about the indoor cat and her shots.</span>
+<textarea readonly rows="4">Two myths about the indoor cat and her shots.
+
+She never goes out, so she doesn&#x27;t need vaccines.
+
+Hirra keeps the schedule for you. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+خرافتان حول القطة المنزلية ولقاحاتها.
+
+لا تخرج أبداً، فهي لا تحتاج لقاحات.
+
+هِرّة تحفظ الجدول لكِ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s29</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s30.jpg" alt="s30">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">One kitten series covers her for life.</span>
+<textarea readonly rows="4">Two myths about the indoor cat and her shots.
+
+She never goes out, so she doesn&#x27;t need vaccines.
+
+Hirra keeps the schedule for you. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+خرافتان حول القطة المنزلية ولقاحاتها.
+
+لا تخرج أبداً، فهي لا تحتاج لقاحات.
+
+هِرّة تحفظ الجدول لكِ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s30</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s31.jpg" alt="s31">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">She never goes out, so she doesn&#x27;t need vaccines.</span>
+<textarea readonly rows="4">Two myths about the indoor cat and her shots.
+
+She never goes out, so she doesn&#x27;t need vaccines.
+
+Hirra keeps the schedule for you. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+خرافتان حول القطة المنزلية ولقاحاتها.
+
+لا تخرج أبداً، فهي لا تحتاج لقاحات.
+
+هِرّة تحفظ الجدول لكِ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s31</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s32.jpg" alt="s32">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Hirra keeps the schedule for you.</span>
+<textarea readonly rows="4">Two myths about the indoor cat and her shots.
+
+She never goes out, so she doesn&#x27;t need vaccines.
+
+Hirra keeps the schedule for you. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+خرافتان حول القطة المنزلية ولقاحاتها.
+
+لا تخرج أبداً، فهي لا تحتاج لقاحات.
+
+هِرّة تحفظ الجدول لكِ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s32</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s33.jpg" alt="s33">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">You already understand how Hirra works.</span>
+<textarea readonly rows="4">You already understand how Hirra works.
+
+A fitness ring learns your normal, then flags the day you drift from it. Same idea.
+
+A baseline for your cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أنتِ تفهمين بالفعل كيف تعمل هِرّة.
+
+خاتم اللياقة يتعلّم وضعك الطبيعي، ثمّ ينبّه يوم تنحرفين عنه. الفكرة نفسها.
+
+خطّ أساس لقطتك. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s33</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s34.jpg" alt="s34">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Hirra learns her normal weight, water, and litter, quietly, day by day.</span>
+<textarea readonly rows="4">You already understand how Hirra works.
+
+A fitness ring learns your normal, then flags the day you drift from it. Same idea.
+
+A baseline for your cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أنتِ تفهمين بالفعل كيف تعمل هِرّة.
+
+خاتم اللياقة يتعلّم وضعك الطبيعي، ثمّ ينبّه يوم تنحرفين عنه. الفكرة نفسها.
+
+خطّ أساس لقطتك. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s34</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s35.jpg" alt="s35">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">A single number means little. A number drifting for two weeks is the real signal.</span>
+<textarea readonly rows="4">You already understand how Hirra works.
+
+A fitness ring learns your normal, then flags the day you drift from it. Same idea.
+
+A baseline for your cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أنتِ تفهمين بالفعل كيف تعمل هِرّة.
+
+خاتم اللياقة يتعلّم وضعك الطبيعي، ثمّ ينبّه يوم تنحرفين عنه. الفكرة نفسها.
+
+خطّ أساس لقطتك. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s35</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s36.jpg" alt="s36">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">A baseline for your cat.</span>
+<textarea readonly rows="4">You already understand how Hirra works.
+
+A fitness ring learns your normal, then flags the day you drift from it. Same idea.
+
+A baseline for your cat. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أنتِ تفهمين بالفعل كيف تعمل هِرّة.
+
+خاتم اللياقة يتعلّم وضعك الطبيعي، ثمّ ينبّه يوم تنحرفين عنه. الفكرة نفسها.
+
+خطّ أساس لقطتك. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s36</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s37.jpg" alt="s37">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">You have a ring for your steps. She deserves one too.</span>
+<textarea readonly rows="4">You have a ring for your steps. She deserves one too.
+
+A cat has her own normal: her weight, her water, her litter. That is her baseline.
+
+Her normal, kept close. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
+
+لكل قطة معدّلها الطبيعي: وزنها، وماؤها، وصندوقها. هذا هو خط أساسها.
+
+معدّلها الطبيعي، محفوظًا قريبًا. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s37</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s38.jpg" alt="s38">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">When a number leaves her normal, you see the gentle nudge early.</span>
+<textarea readonly rows="4">You have a ring for your steps. She deserves one too.
+
+A cat has her own normal: her weight, her water, her litter. That is her baseline.
+
+Her normal, kept close. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
+
+لكل قطة معدّلها الطبيعي: وزنها، وماؤها، وصندوقها. هذا هو خط أساسها.
+
+معدّلها الطبيعي، محفوظًا قريبًا. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s38</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s39.jpg" alt="s39">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">It never names an illness. It just says: this is worth a look.</span>
+<textarea readonly rows="4">You have a ring for your steps. She deserves one too.
+
+A cat has her own normal: her weight, her water, her litter. That is her baseline.
+
+Her normal, kept close. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
+
+لكل قطة معدّلها الطبيعي: وزنها، وماؤها، وصندوقها. هذا هو خط أساسها.
+
+معدّلها الطبيعي، محفوظًا قريبًا. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s39</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s40.jpg" alt="s40">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Her normal, kept close.</span>
+<textarea readonly rows="4">You have a ring for your steps. She deserves one too.
+
+A cat has her own normal: her weight, her water, her litter. That is her baseline.
+
+Her normal, kept close. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
+
+لكل قطة معدّلها الطبيعي: وزنها، وماؤها، وصندوقها. هذا هو خط أساسها.
+
+معدّلها الطبيعي، محفوظًا قريبًا. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s40</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s41.jpg" alt="s41">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">“She never goes out, so she is safe.”</span>
+<textarea readonly rows="4">“She never goes out, so she is safe.”
+
+An indoor cat needs nothing from a vet.
+
+Keep her history in one calm place. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+«هي لا تخرج أبدًا، إذًا هي بأمان.»
+
+القطة المنزلية لا تحتاج شيئًا من الطبيب البيطري.
+
+احفظي تاريخها في مكان واحد هادئ. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s41</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s42.jpg" alt="s42">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">An indoor cat needs nothing from a vet.</span>
+<textarea readonly rows="4">“She never goes out, so she is safe.”
+
+An indoor cat needs nothing from a vet.
+
+Keep her history in one calm place. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+«هي لا تخرج أبدًا، إذًا هي بأمان.»
+
+القطة المنزلية لا تحتاج شيئًا من الطبيب البيطري.
+
+احفظي تاريخها في مكان واحد هادئ. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s42</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s43.jpg" alt="s43">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">If she seems fine, the schedule can wait.</span>
+<textarea readonly rows="4">“She never goes out, so she is safe.”
+
+An indoor cat needs nothing from a vet.
+
+Keep her history in one calm place. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+«هي لا تخرج أبدًا، إذًا هي بأمان.»
+
+القطة المنزلية لا تحتاج شيئًا من الطبيب البيطري.
+
+احفظي تاريخها في مكان واحد هادئ. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s43</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s44.jpg" alt="s44">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Keep her history in one calm place.</span>
+<textarea readonly rows="4">“She never goes out, so she is safe.”
+
+An indoor cat needs nothing from a vet.
+
+Keep her history in one calm place. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+«هي لا تخرج أبدًا، إذًا هي بأمان.»
+
+القطة المنزلية لا تحتاج شيئًا من الطبيب البيطري.
+
+احفظي تاريخها في مكان واحد هادئ. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s44</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s45.jpg" alt="s45">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">The tile looked fine. To her paws it was fire.</span>
+<textarea readonly rows="4">The tile looked fine. To her paws it was fire.
+
+Gulf sun turns pavement, marble, and balconies searing by midday.
+
+Note the small things before they grow. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
+
+شمس الخليج تجعل الرصيف والرخام والشرفات لاهبة عند الظهيرة.
+
+دوّني الأشياء الصغيرة قبل أن تكبر. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s45</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s46.jpg" alt="s46">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Gulf sun turns pavement, marble, and balconies searing by midday.</span>
+<textarea readonly rows="4">The tile looked fine. To her paws it was fire.
+
+Gulf sun turns pavement, marble, and balconies searing by midday.
+
+Note the small things before they grow. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
+
+شمس الخليج تجعل الرصيف والرخام والشرفات لاهبة عند الظهيرة.
+
+دوّني الأشياء الصغيرة قبل أن تكبر. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s46</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s47.jpg" alt="s47">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Walk her in early morning or after dark. Keep to shade and cool floors.</span>
+<textarea readonly rows="4">The tile looked fine. To her paws it was fire.
+
+Gulf sun turns pavement, marble, and balconies searing by midday.
+
+Note the small things before they grow. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
+
+شمس الخليج تجعل الرصيف والرخام والشرفات لاهبة عند الظهيرة.
+
+دوّني الأشياء الصغيرة قبل أن تكبر. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s47</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s48.jpg" alt="s48">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Note the small things before they grow.</span>
+<textarea readonly rows="4">The tile looked fine. To her paws it was fire.
+
+Gulf sun turns pavement, marble, and balconies searing by midday.
+
+Note the small things before they grow. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
+
+شمس الخليج تجعل الرصيف والرخام والشرفات لاهبة عند الظهيرة.
+
+دوّني الأشياء الصغيرة قبل أن تكبر. مجانًا على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s48</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s49.jpg" alt="s49">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Two things owners get wrong about cat breath.</span>
+<textarea readonly rows="4">Two things owners get wrong about cat breath.
+
+Strong breath is just normal cat breath.
+
+Hirra notices the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
+
+الرائحة القوية مجرّد رائحة فم طبيعية للقطة.
+
+هِرّة تلاحظ التغيّر مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s49</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s50.jpg" alt="s50">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">A fussy eater is just picky.</span>
+<textarea readonly rows="4">Two things owners get wrong about cat breath.
+
+Strong breath is just normal cat breath.
+
+Hirra notices the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
+
+الرائحة القوية مجرّد رائحة فم طبيعية للقطة.
+
+هِرّة تلاحظ التغيّر مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s50</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s51.jpg" alt="s51">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Strong breath is just normal cat breath.</span>
+<textarea readonly rows="4">Two things owners get wrong about cat breath.
+
+Strong breath is just normal cat breath.
+
+Hirra notices the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
+
+الرائحة القوية مجرّد رائحة فم طبيعية للقطة.
+
+هِرّة تلاحظ التغيّر مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s51</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s52.jpg" alt="s52">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Hirra notices the change early.</span>
+<textarea readonly rows="4">Two things owners get wrong about cat breath.
+
+Strong breath is just normal cat breath.
+
+Hirra notices the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
+
+الرائحة القوية مجرّد رائحة فم طبيعية للقطة.
+
+هِرّة تلاحظ التغيّر مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s52</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s53.jpg" alt="s53">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">She isn&#x27;t just slowing down with age.</span>
+<textarea readonly rows="4">She isn&#x27;t just slowing down with age.
+
+Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+هي لا تتباطأ مع التقدّم في العمر فحسب.
+
+أغلب القطط فوق العاشرة تحمل ألماً في المفاصل. تُخفيه بالفطرة، فنادراً ما يراه الملّاك.
+
+التقطي العلامات المبكّرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s53</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s54.jpg" alt="s54">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">The signs are quiet: fewer jumps, a lower perch, sleeping more, a stiffer walk.</span>
+<textarea readonly rows="4">She isn&#x27;t just slowing down with age.
+
+Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+هي لا تتباطأ مع التقدّم في العمر فحسب.
+
+أغلب القطط فوق العاشرة تحمل ألماً في المفاصل. تُخفيه بالفطرة، فنادراً ما يراه الملّاك.
+
+التقطي العلامات المبكّرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s54</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s55.jpg" alt="s55">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Hirra watches her activity against her own baseline, so slow drift doesn&#x27;t stay invisible.</span>
+<textarea readonly rows="4">She isn&#x27;t just slowing down with age.
+
+Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+هي لا تتباطأ مع التقدّم في العمر فحسب.
+
+أغلب القطط فوق العاشرة تحمل ألماً في المفاصل. تُخفيه بالفطرة، فنادراً ما يراه الملّاك.
+
+التقطي العلامات المبكّرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s55</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s56.jpg" alt="s56">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Catch the early signs.</span>
+<textarea readonly rows="4">She isn&#x27;t just slowing down with age.
+
+Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+هي لا تتباطأ مع التقدّم في العمر فحسب.
+
+أغلب القطط فوق العاشرة تحمل ألماً في المفاصل. تُخفيه بالفطرة، فنادراً ما يراه الملّاك.
+
+التقطي العلامات المبكّرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s56</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s57.jpg" alt="s57">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">More water in the bowl isn&#x27;t always just the heat.</span>
+<textarea readonly rows="4">More water in the bowl isn&#x27;t always just the heat.
+
+Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
+
+Notice the drift, early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
+
+صيف الخليج يدفع كل قطة لتشرب أكثر. هذا طبيعي، لأسبوع أو أسبوعين.
+
+لاحظي الانحراف مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s57</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s58.jpg" alt="s58">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">One hot week isn&#x27;t a pattern. Hirra tracks her own trend, not a guess.</span>
+<textarea readonly rows="4">More water in the bowl isn&#x27;t always just the heat.
+
+Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
+
+Notice the drift, early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
+
+صيف الخليج يدفع كل قطة لتشرب أكثر. هذا طبيعي، لأسبوع أو أسبوعين.
+
+لاحظي الانحراف مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s58</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s59.jpg" alt="s59">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.</span>
+<textarea readonly rows="4">More water in the bowl isn&#x27;t always just the heat.
+
+Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
+
+Notice the drift, early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
+
+صيف الخليج يدفع كل قطة لتشرب أكثر. هذا طبيعي، لأسبوع أو أسبوعين.
+
+لاحظي الانحراف مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s59</span></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s60.jpg" alt="s60">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Notice the drift, early.</span>
+<textarea readonly rows="4">More water in the bowl isn&#x27;t always just the heat.
+
+Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
+
+Notice the drift, early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+———
+
+الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
+
+صيف الخليج يدفع كل قطة لتشرب أكثر. هذا طبيعي، لأسبوع أو أسبوعين.
+
+لاحظي الانحراف مبكّراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<button onclick="cp(this)">Copy caption</button><span class="id">s60</span></figcaption></figure></div></div>
+<footer>Unlisted internal tool · noindex. Legacy FLUX calendar at <a href="legacy-calendar.html">legacy-calendar.html</a>.</footer>
+<script>function cp(b){const t=b.parentElement.querySelector('textarea');t.select();navigator.clipboard.writeText(t.value);const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1200);}</script>
 </body></html>
