@@ -2,144 +2,146 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Hirra — Content Studio</title>
 <style>
-:root{--ink:#13343B;--mist:#EEF4F5;--slate:#8FA9B0;--card:#102b31;--line:#1c454e;}
+:root{--ink:#13343B;--mist:#EEF4F5;--slate:#8FA9B0;--card:#102b31;--line:#1c454e;
+--green:#10B981;--yellow:#F59E0B;--red:#F43F5E;}
 *{box-sizing:border-box}body{margin:0;background:#0d2429;color:var(--mist);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-header{padding:34px 30px 8px;max-width:1500px;margin:0 auto}h1{margin:0;font-size:28px}
-.sub{color:var(--slate);margin-top:6px;font-size:14px;max-width:82ch;line-height:1.55}
-.stats{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0 4px;align-items:center}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 15px}
-.stat b{font-size:19px}.stat span{display:block;color:var(--slate);font-size:12px;margin-top:2px}
-#summary{background:#17414a;border:1px solid var(--line);border-radius:20px;padding:8px 15px;font-size:13px;font-weight:700}
-.note{background:#123037;border:1px solid var(--line);border-left:3px solid #F59E0B;border-radius:10px;padding:13px 16px;margin:14px 0;font-size:13px;line-height:1.6;color:#cfe0e3;max-width:92ch}
+header{padding:32px 30px 8px;max-width:1500px;margin:0 auto}h1{margin:0;font-size:28px}
+.sub{color:var(--slate);margin-top:6px;font-size:14px;max-width:86ch;line-height:1.55}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 4px;align-items:center}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 14px}
+.stat b{font-size:18px}.stat span{display:block;color:var(--slate);font-size:12px}
+#summary span{padding:7px 12px;border-radius:20px;font-size:13px;font-weight:700;margin-left:8px}
+.spost{background:rgba(16,185,129,.18);color:#5eead4}.ssch{background:rgba(245,158,11,.18);color:#fcd34d}.sdec{background:rgba(244,63,94,.18);color:#fda4af}
+.note{background:#123037;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13px;line-height:1.6;color:#cfe0e3;max-width:94ch}
 h2{padding:24px 30px 0;max-width:1500px;margin:0 auto;font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:var(--slate)}
-.wrap{max-width:1500px;margin:0 auto;padding:14px 30px 40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
-.card{margin:0;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
-.card.st-scheduled{border-left-color:#F59E0B}.card.st-posted{border-left-color:#10B981}
+.wrap{max-width:1500px;margin:0 auto;padding:12px 30px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.card{margin:0;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card.st-posted{border-left-color:var(--green)}.card.st-scheduled{border-left-color:var(--yellow)}.card.st-todecide{border-left-color:var(--red)}
 .card img{width:100%;display:block}.vcard video{width:100%;display:block;background:#000;aspect-ratio:4/5}
 figcaption{padding:10px 12px 13px;display:flex;flex-direction:column;gap:6px;font-size:13px}
 .k{font-size:10px;font-weight:800;letter-spacing:1.2px}.en{line-height:1.35;font-weight:600}
-.id{color:var(--slate);font-size:11px;margin-left:auto}
+.sch{font-size:11px;color:#a9c3c9;background:#0c2429;border:1px solid var(--line);border-radius:7px;padding:4px 7px}
+.sch.none{color:var(--slate)}.id{color:var(--slate);font-size:11px;margin-left:auto}
 .row{display:flex;gap:8px;align-items:center}
 textarea{width:100%;font-size:11px;line-height:1.45;font-family:inherit;color:#dbe8ea;background:#0c2429;border:1px solid var(--line);border-radius:8px;padding:7px;resize:vertical}
 button{font-size:11px;font-weight:700;border:1px solid var(--line);background:#17414a;color:var(--mist);border-radius:20px;padding:5px 11px;cursor:pointer}
-select.st{font-size:11px;font-weight:700;background:#0c2429;color:var(--mist);border:1px solid var(--line);border-radius:20px;padding:5px 9px;cursor:pointer}
+select.st{font-size:11px;font-weight:700;border:1px solid var(--line);border-radius:20px;padding:5px 9px;cursor:pointer;background:#0c2429;color:var(--mist)}
+select.st.v-posted{background:rgba(16,185,129,.22);color:#5eead4}select.st.v-scheduled{background:rgba(245,158,11,.22);color:#fcd34d}select.st.v-todecide{background:rgba(244,63,94,.22);color:#fda4af}
 a{color:#7fd3c7}footer{max-width:1500px;margin:0 auto;padding:20px 30px 60px;color:var(--slate);font-size:12px}
 </style></head><body>
 <header><h1>Hirra — Content Studio</h1>
-<div class="sub">Living content dashboard. Set each asset's status (Draft → Scheduled → Posted); it saves in your browser and colors the card. Captions are copy-ready.</div>
+<div class="sub">Every asset shows its scheduled date + Bangladesh & Gulf time, and a status: <b style="color:var(--green)">Posted</b> · <b style="color:var(--yellow)">Scheduled</b> · <b style="color:var(--red)">Yet to decide</b>. Status saves in your browser and colors the card.</div>
 <div class="stats">
-<div class="stat"><b>60</b><span>Statics</span></div>
-<div class="stat"><b>20</b><span>Videos</span></div>
-<div class="stat"><b>30</b><span>FLUX heroes</span></div>
-<span id="summary">—</span></div>
-<div class="note"><b>Distribution.</b> Organic = bilingual on the page timeline. Paid = single-language dark-post ads, geo-targeted (Arabic→Gulf, English→rest). Status chips are local to this browser.</div>
+<div class="stat"><b>60</b><span>Statics</span></div><div class="stat"><b>20</b><span>Reels</span></div><div class="stat"><b>30</b><span>FLUX heroes</span></div>
+<div id="summary"></div></div>
+<div class="note"><b>Cadence.</b> Reels daily <b>Jul 6-25 @ 9:30 PM BD / 6:30 PM Gulf</b> (15:30 UTC) to IG + FB. Statics 2/day from <b>Jul 12</b> (12:00 PM & 10:30 PM BD). FLUX campaign live Jul 4-11 via the existing scheduler.</div>
 </header>
-<h2>Videos (20)</h2><div class="wrap"><div class="grid"><figure class="card vcard">
+<h2>Reels (20)</h2><div class="wrap"><div class="grid"><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v01-p7.mp4"></video>
-<figcaption><span class="en">v01-p7</span>
+<figcaption><span class="en">v01-p7</span><span class="sch">📅 Tue 07 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Your cat can&#x27;t sweat like you can.  قطتك لا تتعرّق كما تتعرّقين.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v01-p7"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v01-p7" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v02-p10.mp4"></video>
-<figcaption><span class="en">v02-p10</span>
+<figcaption><span class="en">v02-p10</span><span class="sch">📅 Thu 09 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.  إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v02-p10"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v02-p10" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v03-p11.mp4"></video>
-<figcaption><span class="en">v03-p11</span>
+<figcaption><span class="en">v03-p11</span><span class="sch">📅 Sat 11 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Before you post it to the group chat, ask Hirra first.  قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v03-p11"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v03-p11" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v04-p12.mp4"></video>
-<figcaption><span class="en">v04-p12</span>
+<figcaption><span class="en">v04-p12</span><span class="sch">📅 Mon 13 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Not every hairball morning needs a vet trip.  ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v04-p12"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v04-p12" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v05-p20.mp4"></video>
-<figcaption><span class="en">v05-p20</span>
+<figcaption><span class="en">v05-p20</span><span class="sch">📅 Wed 15 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">A new cat isn&#x27;t a light switch.  القطة الجديدة ليست مفتاح إضاءة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v05-p20"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v05-p20" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v06-p21.mp4"></video>
-<figcaption><span class="en">v06-p21</span>
+<figcaption><span class="en">v06-p21</span><span class="sch">📅 Fri 17 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Your cat&#x27;s health isn&#x27;t a highlight reel.  صحّة قطتك ليست عرضاً للمشاهدة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v06-p21"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v06-p21" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v07-p22.mp4"></video>
-<figcaption><span class="en">v07-p22</span>
+<figcaption><span class="en">v07-p22</span><span class="sch">📅 Sun 19 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">The ground she walks on can burn.  الأرض التي تمشي عليها قد تحرق.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v07-p22"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v07-p22" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v08-p23.mp4"></video>
-<figcaption><span class="en">v08-p23</span>
+<figcaption><span class="en">v08-p23</span><span class="sch">📅 Tue 21 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Two myths about the indoor cat and her shots.  خرافتان حول القطة المنزلية ولقاحاتها.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v08-p23"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v08-p23" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v09-p24.mp4"></video>
-<figcaption><span class="en">v09-p24</span>
+<figcaption><span class="en">v09-p24</span><span class="sch">📅 Thu 23 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">You already understand how Hirra works.  أنتِ تفهمين بالفعل كيف تعمل هِرّة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v09-p24"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v09-p24" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v10-p25.mp4"></video>
-<figcaption><span class="en">v10-p25</span>
+<figcaption><span class="en">v10-p25</span><span class="sch">📅 Wed 08 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">You have a ring for your steps. She deserves one too.  لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v10-p25"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v10-p25" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v11-p26.mp4"></video>
-<figcaption><span class="en">v11-p26</span>
+<figcaption><span class="en">v11-p26</span><span class="sch">📅 Fri 10 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">“She never goes out, so she is safe.”  «هي لا تخرج أبدًا، إذًا هي بأمان.»
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v11-p26"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v11-p26" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v12-p27.mp4"></video>
-<figcaption><span class="en">v12-p27</span>
+<figcaption><span class="en">v12-p27</span><span class="sch">📅 Sun 12 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">The tile looked fine. To her paws it was fire.  بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v12-p27"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v12-p27" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v13-p15.mp4"></video>
-<figcaption><span class="en">v13-p15</span>
+<figcaption><span class="en">v13-p15</span><span class="sch">📅 Tue 14 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Two things owners get wrong about cat breath.  أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v13-p15"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v13-p15" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v14-p16.mp4"></video>
-<figcaption><span class="en">v14-p16</span>
+<figcaption><span class="en">v14-p16</span><span class="sch">📅 Thu 16 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">She isn&#x27;t just slowing down with age.  هي لا تتباطأ مع التقدّم في العمر فحسب.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v14-p16"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v14-p16" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v15-p13.mp4"></video>
-<figcaption><span class="en">v15-p13</span>
+<figcaption><span class="en">v15-p13</span><span class="sch">📅 Sat 18 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">More water in the bowl isn&#x27;t always just the heat.  الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v15-p13"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v15-p13" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v16-mood-thriving.mp4"></video>
-<figcaption><span class="en">v16-mood-thriving</span>
+<figcaption><span class="en">v16-mood-thriving</span><span class="sch">📅 Mon 20 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Most days, this is what Hirra says.  في أغلب الأيام، هذا ما تقوله هِرّة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v16-mood-thriving"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v16-mood-thriving" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v17-mood-watch.mp4"></video>
-<figcaption><span class="en">v17-mood-watch</span>
+<figcaption><span class="en">v17-mood-watch</span><span class="sch">📅 Wed 22 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">One thing came up. Not a diagnosis, a nudge.  شيء واحد ظهر. ليس تشخيصاً، بل تنبيهاً.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v17-mood-watch"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v17-mood-watch" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v18-mood-needscare.mp4"></video>
-<figcaption><span class="en">v18-mood-needscare</span>
+<figcaption><span class="en">v18-mood-needscare</span><span class="sch">📅 Fri 24 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">When it&#x27;s this color, call your vet.  حين يكون هذا هو اللون، اتصلي بطبيبك البيطري.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v18-mood-needscare"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v18-mood-needscare" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v19-master.mp4"></video>
-<figcaption><span class="en">v19-master</span>
+<figcaption><span class="en">v19-master</span><span class="sch">📅 Mon 06 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">She hides the illness. Hirra reads the sign.  تخفي المرض. هِرّة تقرأ العلامة.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v19-master"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure><figure class="card vcard">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v19-master" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v20-private.mp4"></video>
-<figcaption><span class="en">v20-private</span>
+<figcaption><span class="en">v20-private</span><span class="sch">📅 Sat 25 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Private by design.  خاصّة بالتصميم.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v20-private"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select></div></figcaption></figure></div></div>
-<h2>Statics (60) — caption + status</h2><div class="wrap"><div class="grid"><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v20-private" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure></div></div>
+<h2>Statics (60) — caption + schedule + status</h2><div class="wrap"><div class="grid"><figure class="card">
 <img loading="lazy" src="assets/statics/s01.jpg" alt="s01">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Your cat can&#x27;t sweat like you can.</span>
+<span class="en">Your cat can&#x27;t sweat like you can.</span><span class="sch">📅 Sun 12 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Your cat can&#x27;t sweat like you can.
 
 She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
@@ -161,10 +163,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s01"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s01</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s01" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s01</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s02.jpg" alt="s02">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Warning signs: heavy panting, drooling, pale gums, wobbling, going quiet. Act now, don&#x27;t wait.</span>
+<span class="en">Warning signs: heavy panting, drooling, pale gums, wobbling, going quiet. Act now, don&#x27;t wait.</span><span class="sch">📅 Sun 19 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Your cat can&#x27;t sweat like you can.
 
 She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
@@ -186,10 +188,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s02"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s02</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s02" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s02</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s03.jpg" alt="s03">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.</span>
+<span class="en">She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.</span><span class="sch">📅 Mon 27 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Your cat can&#x27;t sweat like you can.
 
 She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
@@ -211,10 +213,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s03"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s03</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s03" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s03</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s04.jpg" alt="s04">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Catch the early signs.</span>
+<span class="en">Catch the early signs.</span><span class="sch">📅 Mon 03 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Your cat can&#x27;t sweat like you can.
 
 She cools by panting and a little paw-pad sweat. That&#x27;s not much for Gulf summer.
@@ -236,10 +238,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s04"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s04</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s04" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s04</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s05.jpg" alt="s05">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.</span>
+<span class="en">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.</span><span class="sch">📅 Sun 12 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
 
 Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
@@ -263,10 +265,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s05"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s05</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s05" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s05</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s06.jpg" alt="s06">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">This is exactly what Hirra&#x27;s daily litter check-in is built to catch early.</span>
+<span class="en">This is exactly what Hirra&#x27;s daily litter check-in is built to catch early.</span><span class="sch">📅 Mon 20 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
 
 Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
@@ -290,10 +292,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s06"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s06</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s06" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s06</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s07.jpg" alt="s07">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.</span>
+<span class="en">Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.</span><span class="sch">📅 Mon 27 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
 
 Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
@@ -317,10 +319,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s07"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s07</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s07" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s07</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s08.jpg" alt="s08">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">She hides the illness. Hirra reads the sign.</span>
+<span class="en">She hides the illness. Hirra reads the sign.</span><span class="sch">📅 Tue 04 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">If your boy is in and out of the litter box today, don&#x27;t wait until tomorrow.
 
 Male cats have a narrower path. A blockage turns dangerous fast, in a day or two.
@@ -344,10 +346,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s08"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s08</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s08" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s08</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s09.jpg" alt="s09">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Before you post it to the group chat, ask Hirra first.</span>
+<span class="en">Before you post it to the group chat, ask Hirra first.</span><span class="sch">📅 Mon 13 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Before you post it to the group chat, ask Hirra first.
 
 Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
@@ -369,10 +371,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s09"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s09</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s09" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s09</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s10.jpg" alt="s10">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Ask Hirra is different. It already knows her baseline, not a stranger&#x27;s guess.</span>
+<span class="en">Ask Hirra is different. It already knows her baseline, not a stranger&#x27;s guess.</span><span class="sch">📅 Mon 20 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Before you post it to the group chat, ask Hirra first.
 
 Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
@@ -394,10 +396,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s10"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s10</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s10" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s10</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s11.jpg" alt="s11">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Every cat group has the same post: a blurry photo, forty replies, no two agreeing.</span>
+<span class="en">Every cat group has the same post: a blurry photo, forty replies, no two agreeing.</span><span class="sch">📅 Tue 28 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Before you post it to the group chat, ask Hirra first.
 
 Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
@@ -419,10 +421,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s11"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s11</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s11" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s11</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s12.jpg" alt="s12">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Hirra Plus.</span>
+<span class="en">Hirra Plus.</span><span class="sch">📅 Tue 04 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Before you post it to the group chat, ask Hirra first.
 
 Every cat group has the same post: a blurry photo, forty replies, no two agreeing.
@@ -444,10 +446,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s12"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s12</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s12" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s12</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s13.jpg" alt="s13">
 <figcaption><span class="k" style="color:#F59E0B">TRUST</span>
-<span class="en">Not every hairball morning needs a vet trip.</span>
+<span class="en">Not every hairball morning needs a vet trip.</span><span class="sch">📅 Mon 13 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Not every hairball morning needs a vet trip.
 
 Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
@@ -469,10 +471,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s13"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s13</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s13" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s13</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s14.jpg" alt="s14">
 <figcaption><span class="k" style="color:#F59E0B">TRUST</span>
-<span class="en">Straining, not eating, hiding and unreachable? That&#x27;s a call today.</span>
+<span class="en">Straining, not eating, hiding and unreachable? That&#x27;s a call today.</span><span class="sch">📅 Tue 21 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Not every hairball morning needs a vet trip.
 
 Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
@@ -494,10 +496,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s14"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s14</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s14" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s14</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s15.jpg" alt="s15">
 <figcaption><span class="k" style="color:#F59E0B">TRUST</span>
-<span class="en">Eating, using the box, playing normally? Just watch. Nothing to do today.</span>
+<span class="en">Eating, using the box, playing normally? Just watch. Nothing to do today.</span><span class="sch">📅 Tue 28 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Not every hairball morning needs a vet trip.
 
 Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
@@ -519,10 +521,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s15"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s15</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s15" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s15</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s16.jpg" alt="s16">
 <figcaption><span class="k" style="color:#F59E0B">TRUST</span>
-<span class="en">Hirra runs this check every day.</span>
+<span class="en">Hirra runs this check every day.</span><span class="sch">📅 Wed 05 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Not every hairball morning needs a vet trip.
 
 Not every quiet week is nothing either. Here&#x27;s how to tell the difference.
@@ -544,10 +546,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s16"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s16</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s16" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s16</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s17.jpg" alt="s17">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">A new cat isn&#x27;t a light switch.</span>
+<span class="en">A new cat isn&#x27;t a light switch.</span><span class="sch">📅 Tue 14 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">A new cat isn&#x27;t a light switch.
 
 Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
@@ -569,10 +571,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s17"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s17</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s17" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s17</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s18.jpg" alt="s18">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Go slow, separate spaces first. Scent before sight, sight before contact.</span>
+<span class="en">Go slow, separate spaces first. Scent before sight, sight before contact.</span><span class="sch">📅 Tue 21 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">A new cat isn&#x27;t a light switch.
 
 Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
@@ -594,10 +596,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s18"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s18</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s18" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s18</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s19.jpg" alt="s19">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.</span>
+<span class="en">Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.</span><span class="sch">📅 Wed 29 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">A new cat isn&#x27;t a light switch.
 
 Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
@@ -619,10 +621,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s19"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s19</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s19" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s19</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s20.jpg" alt="s20">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">One profile per cat.</span>
+<span class="en">One profile per cat.</span><span class="sch">📅 Wed 05 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">A new cat isn&#x27;t a light switch.
 
 Most multi-cat homes hit tension. Aggression at the first meeting is common, not failure.
@@ -644,10 +646,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s20"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s20</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s20" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s20</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s21.jpg" alt="s21">
 <figcaption><span class="k" style="color:#10B981">TRUST</span>
-<span class="en">Your cat&#x27;s health isn&#x27;t a highlight reel.</span>
+<span class="en">Your cat&#x27;s health isn&#x27;t a highlight reel.</span><span class="sch">📅 Tue 14 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Your cat&#x27;s health isn&#x27;t a highlight reel.
 
 The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
@@ -669,10 +671,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s21"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s21</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s21" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s21</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s22.jpg" alt="s22">
 <figcaption><span class="k" style="color:#10B981">TRUST</span>
-<span class="en">No account. Works offline. Her numbers live on your phone, for you.</span>
+<span class="en">No account. Works offline. Her numbers live on your phone, for you.</span><span class="sch">📅 Wed 22 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Your cat&#x27;s health isn&#x27;t a highlight reel.
 
 The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
@@ -694,10 +696,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s22"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s22</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s22" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s22</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s23.jpg" alt="s23">
 <figcaption><span class="k" style="color:#10B981">TRUST</span>
-<span class="en">Health is quiet, private work. Not a follower count, not a performance.</span>
+<span class="en">Health is quiet, private work. Not a follower count, not a performance.</span><span class="sch">📅 Wed 29 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Your cat&#x27;s health isn&#x27;t a highlight reel.
 
 The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
@@ -719,10 +721,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s23"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s23</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s23" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s23</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s24.jpg" alt="s24">
 <figcaption><span class="k" style="color:#10B981">TRUST</span>
-<span class="en">Private by design.</span>
+<span class="en">Private by design.</span><span class="sch">📅 Thu 06 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Your cat&#x27;s health isn&#x27;t a highlight reel.
 
 The loud pet apps want your feed, your ads, your data. Hirra wants none of it.
@@ -744,10 +746,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s24"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s24</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s24" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s24</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s25.jpg" alt="s25">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">The ground she walks on can burn.</span>
+<span class="en">The ground she walks on can burn.</span><span class="sch">📅 Wed 15 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">The ground she walks on can burn.
 
 Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
@@ -769,10 +771,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s25"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s25</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s25" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s25</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s26.jpg" alt="s26">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">A burn shows as limping, licking paws, dark or blistered pads, refusing to walk.</span>
+<span class="en">A burn shows as limping, licking paws, dark or blistered pads, refusing to walk.</span><span class="sch">📅 Wed 22 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">The ground she walks on can burn.
 
 Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
@@ -794,10 +796,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s26"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s26</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s26" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s26</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s27.jpg" alt="s27">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Hirra&#x27;s free emergency card walks you through first steps, offline, then to a vet.</span>
+<span class="en">Hirra&#x27;s free emergency card walks you through first steps, offline, then to a vet.</span><span class="sch">📅 Thu 30 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">The ground she walks on can burn.
 
 Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
@@ -819,10 +821,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s27"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s27</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s27" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s27</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s28.jpg" alt="s28">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Check the ground first.</span>
+<span class="en">Check the ground first.</span><span class="sch">📅 Thu 06 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">The ground she walks on can burn.
 
 Gulf tile and pavement in summer can reach temperatures that blister paw pads in seconds.
@@ -844,10 +846,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s28"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s28</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s28" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s28</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s29.jpg" alt="s29">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Two myths about the indoor cat and her shots.</span>
+<span class="en">Two myths about the indoor cat and her shots.</span><span class="sch">📅 Wed 15 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Two myths about the indoor cat and her shots.
 
 She never goes out, so she doesn&#x27;t need vaccines.
@@ -869,10 +871,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s29"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s29</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s29" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s29</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s30.jpg" alt="s30">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">One kitten series covers her for life.</span>
+<span class="en">One kitten series covers her for life.</span><span class="sch">📅 Thu 23 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Two myths about the indoor cat and her shots.
 
 She never goes out, so she doesn&#x27;t need vaccines.
@@ -894,10 +896,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s30"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s30</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s30" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s30</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s31.jpg" alt="s31">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">She never goes out, so she doesn&#x27;t need vaccines.</span>
+<span class="en">She never goes out, so she doesn&#x27;t need vaccines.</span><span class="sch">📅 Thu 30 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Two myths about the indoor cat and her shots.
 
 She never goes out, so she doesn&#x27;t need vaccines.
@@ -919,10 +921,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s31"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s31</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s31" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s31</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s32.jpg" alt="s32">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Hirra keeps the schedule for you.</span>
+<span class="en">Hirra keeps the schedule for you.</span><span class="sch">📅 Fri 07 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Two myths about the indoor cat and her shots.
 
 She never goes out, so she doesn&#x27;t need vaccines.
@@ -944,10 +946,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s32"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s32</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s32" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s32</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s33.jpg" alt="s33">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">You already understand how Hirra works.</span>
+<span class="en">You already understand how Hirra works.</span><span class="sch">📅 Thu 16 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">You already understand how Hirra works.
 
 A fitness ring learns your normal, then flags the day you drift from it. Same idea.
@@ -969,10 +971,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s33"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s33</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s33" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s33</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s34.jpg" alt="s34">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Hirra learns her normal weight, water, and litter, quietly, day by day.</span>
+<span class="en">Hirra learns her normal weight, water, and litter, quietly, day by day.</span><span class="sch">📅 Thu 23 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">You already understand how Hirra works.
 
 A fitness ring learns your normal, then flags the day you drift from it. Same idea.
@@ -994,10 +996,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s34"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s34</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s34" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s34</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s35.jpg" alt="s35">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">A single number means little. A number drifting for two weeks is the real signal.</span>
+<span class="en">A single number means little. A number drifting for two weeks is the real signal.</span><span class="sch">📅 Fri 31 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">You already understand how Hirra works.
 
 A fitness ring learns your normal, then flags the day you drift from it. Same idea.
@@ -1019,10 +1021,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s35"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s35</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s35" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s35</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s36.jpg" alt="s36">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">A baseline for your cat.</span>
+<span class="en">A baseline for your cat.</span><span class="sch">📅 Fri 07 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">You already understand how Hirra works.
 
 A fitness ring learns your normal, then flags the day you drift from it. Same idea.
@@ -1044,10 +1046,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s36"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s36</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s36" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s36</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s37.jpg" alt="s37">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">You have a ring for your steps. She deserves one too.</span>
+<span class="en">You have a ring for your steps. She deserves one too.</span><span class="sch">📅 Thu 16 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">You have a ring for your steps. She deserves one too.
 
 A cat has her own normal: her weight, her water, her litter. That is her baseline.
@@ -1069,10 +1071,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s37"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s37</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s37" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s37</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s38.jpg" alt="s38">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">When a number leaves her normal, you see the gentle nudge early.</span>
+<span class="en">When a number leaves her normal, you see the gentle nudge early.</span><span class="sch">📅 Fri 24 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">You have a ring for your steps. She deserves one too.
 
 A cat has her own normal: her weight, her water, her litter. That is her baseline.
@@ -1094,10 +1096,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s38"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s38</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s38" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s38</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s39.jpg" alt="s39">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">It never names an illness. It just says: this is worth a look.</span>
+<span class="en">It never names an illness. It just says: this is worth a look.</span><span class="sch">📅 Fri 31 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">You have a ring for your steps. She deserves one too.
 
 A cat has her own normal: her weight, her water, her litter. That is her baseline.
@@ -1119,10 +1121,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s39"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s39</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s39" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s39</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s40.jpg" alt="s40">
 <figcaption><span class="k" style="color:#10B981">PRODUCT</span>
-<span class="en">Her normal, kept close.</span>
+<span class="en">Her normal, kept close.</span><span class="sch">📅 Sat 08 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">You have a ring for your steps. She deserves one too.
 
 A cat has her own normal: her weight, her water, her litter. That is her baseline.
@@ -1144,10 +1146,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s40"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s40</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s40" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s40</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s41.jpg" alt="s41">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">“She never goes out, so she is safe.”</span>
+<span class="en">“She never goes out, so she is safe.”</span><span class="sch">📅 Fri 17 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">“She never goes out, so she is safe.”
 
 An indoor cat needs nothing from a vet.
@@ -1169,10 +1171,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s41"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s41</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s41" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s41</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s42.jpg" alt="s42">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">An indoor cat needs nothing from a vet.</span>
+<span class="en">An indoor cat needs nothing from a vet.</span><span class="sch">📅 Fri 24 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">“She never goes out, so she is safe.”
 
 An indoor cat needs nothing from a vet.
@@ -1194,10 +1196,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s42"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s42</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s42" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s42</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s43.jpg" alt="s43">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">If she seems fine, the schedule can wait.</span>
+<span class="en">If she seems fine, the schedule can wait.</span><span class="sch">📅 Sat 01 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">“She never goes out, so she is safe.”
 
 An indoor cat needs nothing from a vet.
@@ -1219,10 +1221,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s43"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s43</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s43" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s43</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s44.jpg" alt="s44">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Keep her history in one calm place.</span>
+<span class="en">Keep her history in one calm place.</span><span class="sch">📅 Sat 08 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">“She never goes out, so she is safe.”
 
 An indoor cat needs nothing from a vet.
@@ -1244,10 +1246,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s44"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s44</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s44" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s44</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s45.jpg" alt="s45">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">The tile looked fine. To her paws it was fire.</span>
+<span class="en">The tile looked fine. To her paws it was fire.</span><span class="sch">📅 Fri 17 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">The tile looked fine. To her paws it was fire.
 
 Gulf sun turns pavement, marble, and balconies searing by midday.
@@ -1269,10 +1271,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s45"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s45</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s45" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s45</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s46.jpg" alt="s46">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Gulf sun turns pavement, marble, and balconies searing by midday.</span>
+<span class="en">Gulf sun turns pavement, marble, and balconies searing by midday.</span><span class="sch">📅 Sat 25 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">The tile looked fine. To her paws it was fire.
 
 Gulf sun turns pavement, marble, and balconies searing by midday.
@@ -1294,10 +1296,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s46"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s46</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s46" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s46</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s47.jpg" alt="s47">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Walk her in early morning or after dark. Keep to shade and cool floors.</span>
+<span class="en">Walk her in early morning or after dark. Keep to shade and cool floors.</span><span class="sch">📅 Sat 01 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">The tile looked fine. To her paws it was fire.
 
 Gulf sun turns pavement, marble, and balconies searing by midday.
@@ -1319,10 +1321,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s47"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s47</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s47" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s47</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s48.jpg" alt="s48">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
-<span class="en">Note the small things before they grow.</span>
+<span class="en">Note the small things before they grow.</span><span class="sch">📅 Sun 09 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">The tile looked fine. To her paws it was fire.
 
 Gulf sun turns pavement, marble, and balconies searing by midday.
@@ -1344,10 +1346,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s48"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s48</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s48" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s48</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s49.jpg" alt="s49">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Two things owners get wrong about cat breath.</span>
+<span class="en">Two things owners get wrong about cat breath.</span><span class="sch">📅 Sat 18 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Two things owners get wrong about cat breath.
 
 Strong breath is just normal cat breath.
@@ -1369,10 +1371,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s49"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s49</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s49" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s49</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s50.jpg" alt="s50">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">A fussy eater is just picky.</span>
+<span class="en">A fussy eater is just picky.</span><span class="sch">📅 Sat 25 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Two things owners get wrong about cat breath.
 
 Strong breath is just normal cat breath.
@@ -1394,10 +1396,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s50"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s50</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s50" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s50</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s51.jpg" alt="s51">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Strong breath is just normal cat breath.</span>
+<span class="en">Strong breath is just normal cat breath.</span><span class="sch">📅 Sun 02 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">Two things owners get wrong about cat breath.
 
 Strong breath is just normal cat breath.
@@ -1419,10 +1421,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s51"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s51</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s51" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s51</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s52.jpg" alt="s52">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Hirra notices the change early.</span>
+<span class="en">Hirra notices the change early.</span><span class="sch">📅 Sun 09 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">Two things owners get wrong about cat breath.
 
 Strong breath is just normal cat breath.
@@ -1444,10 +1446,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s52"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s52</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s52" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s52</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s53.jpg" alt="s53">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">She isn&#x27;t just slowing down with age.</span>
+<span class="en">She isn&#x27;t just slowing down with age.</span><span class="sch">📅 Sat 18 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">She isn&#x27;t just slowing down with age.
 
 Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
@@ -1469,10 +1471,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s53"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s53</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s53" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s53</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s54.jpg" alt="s54">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">The signs are quiet: fewer jumps, a lower perch, sleeping more, a stiffer walk.</span>
+<span class="en">The signs are quiet: fewer jumps, a lower perch, sleeping more, a stiffer walk.</span><span class="sch">📅 Sun 26 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">She isn&#x27;t just slowing down with age.
 
 Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
@@ -1494,10 +1496,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s54"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s54</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s54" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s54</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s55.jpg" alt="s55">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Hirra watches her activity against her own baseline, so slow drift doesn&#x27;t stay invisible.</span>
+<span class="en">Hirra watches her activity against her own baseline, so slow drift doesn&#x27;t stay invisible.</span><span class="sch">📅 Sun 02 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">She isn&#x27;t just slowing down with age.
 
 Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
@@ -1519,10 +1521,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s55"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s55</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s55" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s55</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s56.jpg" alt="s56">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Catch the early signs.</span>
+<span class="en">Catch the early signs.</span><span class="sch">📅 Mon 10 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">She isn&#x27;t just slowing down with age.
 
 Most cats over ten carry joint pain. They hide it by instinct, so owners rarely see it.
@@ -1544,10 +1546,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s56"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s56</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s56" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s56</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s57.jpg" alt="s57">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">More water in the bowl isn&#x27;t always just the heat.</span>
+<span class="en">More water in the bowl isn&#x27;t always just the heat.</span><span class="sch">📅 Sun 19 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">More water in the bowl isn&#x27;t always just the heat.
 
 Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
@@ -1569,10 +1571,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s57"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s57</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s57" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s57</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s58.jpg" alt="s58">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">One hot week isn&#x27;t a pattern. Hirra tracks her own trend, not a guess.</span>
+<span class="en">One hot week isn&#x27;t a pattern. Hirra tracks her own trend, not a guess.</span><span class="sch">📅 Sun 26 Jul · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">More water in the bowl isn&#x27;t always just the heat.
 
 Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
@@ -1594,10 +1596,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s58"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s58</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s58" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s58</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s59.jpg" alt="s59">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.</span>
+<span class="en">Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.</span><span class="sch">📅 Mon 03 Aug · 12:00 PM BD / 9:00 AM Gulf</span>
 <textarea readonly rows="3">More water in the bowl isn&#x27;t always just the heat.
 
 Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
@@ -1619,10 +1621,10 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s59"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s59</span></div></figcaption></figure><figure class="card">
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s59" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s59</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/statics/s60.jpg" alt="s60">
 <figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
-<span class="en">Notice the drift, early.</span>
+<span class="en">Notice the drift, early.</span><span class="sch">📅 Mon 10 Aug · 10:30 PM BD / 7:30 PM Gulf</span>
 <textarea readonly rows="3">More water in the bowl isn&#x27;t always just the heat.
 
 Gulf summers push every cat to drink more. That&#x27;s normal, for a week or two.
@@ -1644,102 +1646,106 @@ Save this, or send it to a cat person.
 احفظيه، وشاركيه مع محبّي القطط.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
-<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s60"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">s60</span></div></figcaption></figure></div></div>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s60" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s60</span></div></figcaption></figure></div></div>
 <h2>Language of Quiet — FLUX heroes (30)</h2><div class="wrap"><div class="grid"><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-01.jpg" alt="flux-campaign-piece-01">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-01"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-01</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-01" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-01</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-02.jpg" alt="flux-campaign-piece-02">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-02"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-02</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-02" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-02</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-03.jpg" alt="flux-campaign-piece-03">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-03"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-03</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-03" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-03</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-04.jpg" alt="flux-campaign-piece-04">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-04"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-04</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-04" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-04</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-12.jpg" alt="flux-campaign-piece-12">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-12"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-12</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-12" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-12</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-13.jpg" alt="flux-campaign-piece-13">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-13"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-13</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-13" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-13</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-14.jpg" alt="flux-campaign-piece-14">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-14"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-14</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-14" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-14</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-15.jpg" alt="flux-campaign-piece-15">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-15"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-15</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-15" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-15</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-16.jpg" alt="flux-campaign-piece-16">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-16"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-16</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-16" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-16</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-17.jpg" alt="flux-campaign-piece-17">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-17"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-17</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-17" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-17</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-18.jpg" alt="flux-campaign-piece-18">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-18"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-18</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-18" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-18</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-19.jpg" alt="flux-campaign-piece-19">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-19"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-19</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-19" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-19</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-20.jpg" alt="flux-campaign-piece-20">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-20"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-20</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-20" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-20</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-21.jpg" alt="flux-campaign-piece-21">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-21"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-21</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-21" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-21</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-22.jpg" alt="flux-campaign-piece-22">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-22"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-22</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-22" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-22</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-23.jpg" alt="flux-campaign-piece-23">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-23"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-23</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-23" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-23</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-campaign-piece-24.jpg" alt="flux-campaign-piece-24">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-campaign-piece-24"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-campaign-piece-24</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-campaign-piece-24" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-campaign-piece-24</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-1.jpg" alt="flux-finished-finished-1">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-1"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-1</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-1" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-1</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-2.jpg" alt="flux-finished-finished-2">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-2"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-2</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-2" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-2</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-3.jpg" alt="flux-finished-finished-3">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-3"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-3</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-3" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-3</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-4.jpg" alt="flux-finished-finished-4">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-4"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-4</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-4" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-4</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-5.jpg" alt="flux-finished-finished-5">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-5"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-5</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-5" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-5</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-6.jpg" alt="flux-finished-finished-6">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-6"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-6</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-6" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-6</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-7.jpg" alt="flux-finished-finished-7">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-7"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-7</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-7" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-7</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-8.jpg" alt="flux-finished-finished-8">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-8"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-8</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-8" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-8</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-finished-finished-post.jpg" alt="flux-finished-finished-post">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-finished-finished-post"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-finished-finished-post</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-finished-finished-post" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-finished-finished-post</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-hero-hero-flux-1.jpg" alt="flux-hero-hero-flux-1">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-hero-hero-flux-1"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-hero-hero-flux-1</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-hero-hero-flux-1" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-hero-hero-flux-1</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-hero-hero-flux-2.jpg" alt="flux-hero-hero-flux-2">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-hero-hero-flux-2"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-hero-hero-flux-2</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-hero-hero-flux-2" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-hero-hero-flux-2</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-hero-hero-flux-3.jpg" alt="flux-hero-hero-flux-3">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-hero-hero-flux-3"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-hero-hero-flux-3</span></div></figcaption></figure><figure class="card">
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-hero-hero-flux-3" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-hero-hero-flux-3</span></div></figcaption></figure><figure class="card">
 <img loading="lazy" src="assets/flux/flux-hero-hero-flux-4.jpg" alt="flux-hero-hero-flux-4">
-<figcaption><span class="en">Language of Quiet</span>
-<div class="row"><select class="st" data-k="flux-hero-hero-flux-4"><option value="">Draft</option><option value="scheduled">Scheduled</option><option value="posted">Posted</option></select><span class="id">flux-hero-hero-flux-4</span></div></figcaption></figure></div></div>
+<figcaption><span class="en">Language of Quiet</span><span class="sch">📅 campaign · Jul 4-11 (live)</span>
+<div class="row"><select class="st" data-k="flux-hero-hero-flux-4" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">flux-hero-hero-flux-4</span></div></figcaption></figure></div></div>
 <footer>Unlisted internal tool · noindex. Legacy calendar at <a href="legacy-calendar.html">legacy-calendar.html</a>.</footer>
 <script>
 function cp(b){const t=b.closest('figcaption').querySelector('textarea');t.select();navigator.clipboard.writeText(t.value);const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1200);}
-function applyAll(){let d=0,s=0,p=0;document.querySelectorAll('.st').forEach(sel=>{const v=localStorage.getItem('hst-'+sel.dataset.k)||'';sel.value=v;const c=sel.closest('.card');c.classList.remove('st-scheduled','st-posted');if(v)c.classList.add('st-'+v);if(v==='scheduled')s++;else if(v==='posted')p++;else d++;});document.getElementById('summary').textContent=`${p} posted · ${s} scheduled · ${d} draft`;}
+function applyAll(){let p=0,s=0,d=0;document.querySelectorAll('.st').forEach(sel=>{
+ const v=localStorage.getItem('hst-'+sel.dataset.k)||sel.dataset.def;sel.value=v;
+ sel.className='st v-'+v;const c=sel.closest('.card');c.classList.remove('st-posted','st-scheduled','st-todecide');c.classList.add('st-'+v);
+ if(v==='posted')p++;else if(v==='scheduled')s++;else d++;});
+ document.getElementById('summary').innerHTML=`<span class="spost">${p} posted</span><span class="ssch">${s} scheduled</span><span class="sdec">${d} to decide</span>`;}
 document.addEventListener('change',e=>{if(e.target.classList.contains('st')){localStorage.setItem('hst-'+e.target.dataset.k,e.target.value);applyAll();}});
 applyAll();
 </script></body></html>
