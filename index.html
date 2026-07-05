@@ -1741,11 +1741,20 @@ Save this, or send it to a cat person.
 <footer>Unlisted internal tool · noindex. Legacy calendar at <a href="legacy-calendar.html">legacy-calendar.html</a>.</footer>
 <script>
 function cp(b){const t=b.closest('figcaption').querySelector('textarea');t.select();navigator.clipboard.writeText(t.value);const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1200);}
+window.__posted=new Set();
 function applyAll(){let p=0,s=0,d=0;document.querySelectorAll('.st').forEach(sel=>{
- const v=localStorage.getItem('hst-'+sel.dataset.k)||sel.dataset.def;sel.value=v;
- sel.className='st v-'+v;const c=sel.closest('.card');c.classList.remove('st-posted','st-scheduled','st-todecide');c.classList.add('st-'+v);
+ const locked=window.__posted.has(sel.dataset.k);
+ const v=locked?'posted':(localStorage.getItem('hst-'+sel.dataset.k)||sel.dataset.def);
+ sel.value=v;sel.disabled=locked;sel.className='st v-'+v;
+ const c=sel.closest('.card');c.classList.remove('st-posted','st-scheduled','st-todecide');c.classList.add('st-'+v);
  if(v==='posted')p++;else if(v==='scheduled')s++;else d++;});
  document.getElementById('summary').innerHTML=`<span class="spost">${p} posted</span><span class="ssch">${s} scheduled</span><span class="sdec">${d} to decide</span>`;}
-document.addEventListener('change',e=>{if(e.target.classList.contains('st')){localStorage.setItem('hst-'+e.target.dataset.k,e.target.value);applyAll();}});
-applyAll();
+async function sync(){
+ const base='https://raw.githubusercontent.com/mumullickm/hirra-ig-scheduler/main/';const s=new Set();
+ try{const r=await (await fetch(base+'posted_reels.json?t='+Date.now(),{cache:'no-store'})).json();for(const k in r){if(r[k]&&(r[k].ig||r[k].fb))s.add(k);}}catch(e){}
+ try{const p=await (await fetch(base+'posted.json?t='+Date.now(),{cache:'no-store'})).json();for(const x of p)s.add('flux-campaign-piece-'+String(x).padStart(2,'0'));}catch(e){}
+ window.__posted=s;applyAll();
+}
+document.addEventListener('change',e=>{if(e.target.classList.contains('st')&&!window.__posted.has(e.target.dataset.k)){localStorage.setItem('hst-'+e.target.dataset.k,e.target.value);applyAll();}});
+applyAll();sync();setInterval(sync,300000);
 </script></body></html>
