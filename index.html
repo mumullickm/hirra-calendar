@@ -14,6 +14,7 @@ header{padding:32px 30px 8px;max-width:1500px;margin:0 auto}h1{margin:0;font-siz
 .spost{background:rgba(16,185,129,.18);color:#5eead4}.ssch{background:rgba(245,158,11,.18);color:#fcd34d}.sdec{background:rgba(244,63,94,.18);color:#fda4af}
 .note{background:#123037;border:1px solid var(--line);border-left:3px solid var(--yellow);border-radius:10px;padding:12px 16px;margin:14px 0;font-size:13px;line-height:1.6;color:#cfe0e3;max-width:94ch}
 h2{padding:24px 30px 0;max-width:1500px;margin:0 auto;font-size:14px;text-transform:uppercase;letter-spacing:1.6px;color:var(--slate)}
+h2 .new{background:rgba(16,185,129,.2);color:#5eead4;border-radius:8px;padding:2px 8px;margin-right:8px}
 .wrap{max-width:1500px;margin:0 auto;padding:12px 30px 40px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
 .card{margin:0;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
@@ -31,13 +32,1673 @@ select.st.v-posted{background:rgba(16,185,129,.22);color:#5eead4}select.st.v-sch
 a{color:#7fd3c7}footer{max-width:1500px;margin:0 auto;padding:20px 30px 60px;color:var(--slate);font-size:12px}
 </style></head><body>
 <header><h1>Hirra — Content Studio</h1>
-<div class="sub">Every asset shows its scheduled date + Bangladesh & Gulf time, and a status: <b style="color:var(--green)">Posted</b> · <b style="color:var(--yellow)">Scheduled</b> · <b style="color:var(--red)">Yet to decide</b>. Status saves in your browser and colors the card.</div>
+<div class="sub">Every asset shows its scheduled date + Bangladesh &amp; Gulf time, and a status: <b style="color:var(--green)">Posted</b> · <b style="color:var(--yellow)">Scheduled</b> · <b style="color:var(--red)">Yet to decide</b>. Status saves in your browser and colors the card. <b>Batch 2 is new and unscheduled</b>: it refills the runway when batch 1 ends (reels 24 Jul, statics 10 Aug).</div>
 <div class="stats">
-<div class="stat"><b>60</b><span>Statics</span></div><div class="stat"><b>20</b><span>Reels</span></div><div class="stat"><b>16</b><span>FLUX heroes</span></div>
+<div class="stat"><b>120</b><span>Statics</span></div><div class="stat"><b>50</b><span>Reels</span></div><div class="stat"><b>16</b><span>FLUX heroes</span></div>
 <div id="summary"></div></div>
-<div class="note"><b>Cadence.</b> Reels daily <b>Jul 6-25 @ 9:30 PM BD / 6:30 PM Gulf</b> (15:30 UTC) to IG + FB. Statics 2/day from <b>Jul 12</b> (12:00 PM & 10:30 PM BD). FLUX campaign live Jul 4-11 via the existing scheduler.</div>
+<div class="note"><b>Cadence.</b> Batch 1: reels daily <b>Jul 6-24 @ 9:30 PM BD / 6:30 PM Gulf</b>, statics 2/day from <b>Jul 12 to Aug 10</b>. Batch 2 (60 statics + 30 reels) is rendered, captioned, and waiting for the next scheduling pass.</div>
 </header>
-<h2>Reels (20)</h2><div class="wrap"><div class="grid"><figure class="card vcard">
+<h2><span class="new">NEW</span>Batch 2 · Reels v21-50 (30)</h2><div class="wrap"><div class="grid"><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v21-p30.mp4"></video>
+<figcaption><span class="en">v21-p30</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">A hairball a week is not &quot;just a cat thing.&quot;  كرة شعر كل أسبوع ليست &quot;عادة قطط&quot; طبيعية.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v21-p30" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v22-p31.mp4"></video>
+<figcaption><span class="en">v22-p31</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">She&#x27;s not sulking under the bed. She might be hurting.  ليست غاضبة تحت السرير. قد تكون متألمة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v22-p31" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v23-p32.mp4"></video>
+<figcaption><span class="en">v23-p32</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">The water bowl is a health report. Most of us never read it.  وعاء الماء تقرير صحي. أكثرنا لا يقرؤه أبداً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v23-p32" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v24-p33.mp4"></video>
+<figcaption><span class="en">v24-p33</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">A cat that skips food for a full day is not &quot;on a diet.&quot;  قطة تمتنع عن الطعام يوماً كاملاً ليست &quot;في حمية&quot;.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v24-p33" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v25-p34.mp4"></video>
+<figcaption><span class="en">v25-p34</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Licking herself bald is not extra cleanliness.  لعق فروها حتى الصلع ليس نظافة زائدة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v25-p34" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v26-p35.mp4"></video>
+<figcaption><span class="en">v26-p35</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.  القطط الكبيرة لا &quot;تنحف مع العمر&quot; ببساطة. فقدان الوزن نتيجة تستحق الانتباه.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v26-p35" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v27-p36.mp4"></video>
+<figcaption><span class="en">v27-p36</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">She slow-blinked at you. That was a love letter.  أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v27-p36" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v28-p37.mp4"></video>
+<figcaption><span class="en">v28-p37</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">The bouquet on your table can be lethal to her.  باقة الزهور على طاولتك قد تكون قاتلة لها.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v28-p37" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v29-p38.mp4"></video>
+<figcaption><span class="en">v29-p38</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">&quot;Cat breath&quot; that clears the room is a medical sign.  &quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v29-p38" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v30-p39.mp4"></video>
+<figcaption><span class="en">v30-p39</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">A little curtain across her eye? That&#x27;s the third eyelid.  غشاء صغير يغطي عينها؟ هذا هو الجفن الثالث.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v30-p39" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v31-p40.mp4"></video>
+<figcaption><span class="en">v31-p40</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">30 seconds a day. That&#x27;s the whole routine.  30 ثانية في اليوم. هذا هو الروتين كله.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v31-p40" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v32-p41.mp4"></video>
+<figcaption><span class="en">v32-p41</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Your vet&#x27;s first question is always &quot;since when?&quot;  أول سؤال يسأله الطبيب دائماً: &quot;منذ متى؟&quot;
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v32-p41" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v33-p42.mp4"></video>
+<figcaption><span class="en">v33-p42</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Her health diary never leaves your phone.  دفتر صحتها لا يغادر هاتفك أبداً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v33-p42" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v34-p43.mp4"></video>
+<figcaption><span class="en">v34-p43</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Indoor cats in the Gulf live years longer. Boredom is the tax.  قطط المنازل في الخليج تعيش سنوات أطول. والملل هو الضريبة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v34-p43" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v35-p44.mp4"></video>
+<figcaption><span class="en">v35-p44</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">At 2 AM with a sick cat, you don&#x27;t want to be Googling.  في الثانية فجراً مع قطة مريضة، لا تريدين البحث في Google.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v35-p44" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v36-slowblink.mp4"></video>
+<figcaption><span class="en">v36-slowblink</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">She slow-blinked at you. That was a love letter.  أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v36-slowblink" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v37-water.mp4"></video>
+<figcaption><span class="en">v37-water</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">The water bowl is a health report.  وعاء الماء تقرير صحي.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v37-water" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v38-2am.mp4"></video>
+<figcaption><span class="en">v38-2am</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">At 2 AM with a sick cat, don&#x27;t Google.  في الثانية فجراً مع قطة مريضة، لا تبحثي في Google.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v38-2am" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v39-30sec.mp4"></video>
+<figcaption><span class="en">v39-30sec</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">30 seconds a day. That&#x27;s the whole routine.  30 ثانية في اليوم. هذا هو الروتين كله.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v39-30sec" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v40-sincewhen.mp4"></video>
+<figcaption><span class="en">v40-sincewhen</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Your vet always asks: since when?  طبيبك يسأل دائماً: منذ متى؟
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v40-sincewhen" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v41-lilies.mp4"></video>
+<figcaption><span class="en">v41-lilies</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">The bouquet on your table can be lethal to her.  باقة الزهور على طاولتك قد تكون قاتلة لها.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v41-lilies" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v42-quietdays.mp4"></video>
+<figcaption><span class="en">v42-quietdays</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">One quiet day can be nothing.  يوم هادئ واحد قد لا يعني شيئاً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v42-quietdays" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v43-notdiet.mp4"></video>
+<figcaption><span class="en">v43-notdiet</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Skipping food for a day is not a diet.  الامتناع عن الطعام يوماً ليس حمية.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v43-notdiet" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v44-breath.mp4"></video>
+<figcaption><span class="en">v44-breath</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">&quot;Cat breath&quot; that clears the room is a medical sign.  &quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v44-breath" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v45-hands.mp4"></video>
+<figcaption><span class="en">v45-hands</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Your hands notice weight loss before your eyes do.  يداك تلاحظان فقدان الوزن قبل عينيك.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v45-hands" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v46-indoor.mp4"></video>
+<figcaption><span class="en">v46-indoor</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Indoor cats in the Gulf live years longer.  قطط المنازل في الخليج تعيش سنوات أطول.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v46-indoor" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v47-private.mp4"></video>
+<figcaption><span class="en">v47-private</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Her health diary never leaves your phone.  دفتر صحتها لا يغادر هاتفك أبداً.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v47-private" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v48-thirdeyelid.mp4"></video>
+<figcaption><span class="en">v48-thirdeyelid</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">A little curtain across her eye?  غشاء صغير يغطي عينها؟
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v48-thirdeyelid" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v49-overgrooming.mp4"></video>
+<figcaption><span class="en">v49-overgrooming</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">Licking herself bald is not extra cleanliness.  لعق فروها حتى الصلع ليس نظافة زائدة.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v49-overgrooming" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure><figure class="card vcard">
+<video controls playsinline preload="metadata" src="assets/videos/v50-master2.mp4"></video>
+<figcaption><span class="en">v50-master2</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="2">She purrs even when she hurts.  تخرخر حتى وهي تتألم.
+#cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v50-master2" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure></div></div>
+<h2><span class="new">NEW</span>Batch 2 · Statics s61-120 (60)</h2><div class="wrap"><div class="grid"><figure class="card">
+<img loading="lazy" src="assets/statics/s61.jpg" alt="s61">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">A hairball a week is not &quot;just a cat thing.&quot;</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A hairball a week is not &quot;just a cat thing.&quot;
+
+Occasional hairballs happen. Frequent vomiting of any kind is a signal, not a habit.
+
+Track it once a day. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+كرة شعر كل أسبوع ليست &quot;عادة قطط&quot; طبيعية.
+
+كرات الشعر أحياناً تحدث. أما التقيؤ المتكرر بأي شكل فهو إشارة، لا عادة.
+
+سجّليها مرة كل يوم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s61" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s61</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s62.jpg" alt="s62">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">A quick note of when and what helps your vet see the pattern.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A hairball a week is not &quot;just a cat thing.&quot;
+
+Occasional hairballs happen. Frequent vomiting of any kind is a signal, not a habit.
+
+Track it once a day. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+كرة شعر كل أسبوع ليست &quot;عادة قطط&quot; طبيعية.
+
+كرات الشعر أحياناً تحدث. أما التقيؤ المتكرر بأي شكل فهو إشارة، لا عادة.
+
+سجّليها مرة كل يوم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s62" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s62</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s63.jpg" alt="s63">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Occasional hairballs happen. Frequent vomiting of any kind is a signal, not a habit.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A hairball a week is not &quot;just a cat thing.&quot;
+
+Occasional hairballs happen. Frequent vomiting of any kind is a signal, not a habit.
+
+Track it once a day. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+كرة شعر كل أسبوع ليست &quot;عادة قطط&quot; طبيعية.
+
+كرات الشعر أحياناً تحدث. أما التقيؤ المتكرر بأي شكل فهو إشارة، لا عادة.
+
+سجّليها مرة كل يوم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s63" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s63</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s64.jpg" alt="s64">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Track it once a day.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A hairball a week is not &quot;just a cat thing.&quot;
+
+Occasional hairballs happen. Frequent vomiting of any kind is a signal, not a habit.
+
+Track it once a day. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+كرة شعر كل أسبوع ليست &quot;عادة قطط&quot; طبيعية.
+
+كرات الشعر أحياناً تحدث. أما التقيؤ المتكرر بأي شكل فهو إشارة، لا عادة.
+
+سجّليها مرة كل يوم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s64" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s64</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s65.jpg" alt="s65">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">She&#x27;s not sulking under the bed. She might be hurting.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She&#x27;s not sulking under the bed. She might be hurting.
+
+Cats hide pain by instinct. Withdrawing to dark corners is a classic sign.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+ليست غاضبة تحت السرير. قد تكون متألمة.
+
+القطط تُخفي الألم بالفطرة. والانسحاب إلى الزوايا المظلمة علامة معروفة.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s65" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s65</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s66.jpg" alt="s66">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">One quiet day can be nothing. Three quiet days is a message.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She&#x27;s not sulking under the bed. She might be hurting.
+
+Cats hide pain by instinct. Withdrawing to dark corners is a classic sign.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+ليست غاضبة تحت السرير. قد تكون متألمة.
+
+القطط تُخفي الألم بالفطرة. والانسحاب إلى الزوايا المظلمة علامة معروفة.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s66" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s66</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s67.jpg" alt="s67">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Cats hide pain by instinct. Withdrawing to dark corners is a classic sign.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She&#x27;s not sulking under the bed. She might be hurting.
+
+Cats hide pain by instinct. Withdrawing to dark corners is a classic sign.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+ليست غاضبة تحت السرير. قد تكون متألمة.
+
+القطط تُخفي الألم بالفطرة. والانسحاب إلى الزوايا المظلمة علامة معروفة.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s67" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s67</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s68.jpg" alt="s68">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">She hides the illness. Hirra reads the sign.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She&#x27;s not sulking under the bed. She might be hurting.
+
+Cats hide pain by instinct. Withdrawing to dark corners is a classic sign.
+
+She hides the illness.
+Hirra reads the sign. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+ليست غاضبة تحت السرير. قد تكون متألمة.
+
+القطط تُخفي الألم بالفطرة. والانسحاب إلى الزوايا المظلمة علامة معروفة.
+
+تُخفي المرض.
+هِرّة تقرأ العلامة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s68" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s68</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s69.jpg" alt="s69">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">The water bowl is a health report. Most of us never read it.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The water bowl is a health report. Most of us never read it.
+
+Drinking much more, or much less, is an early flag for kidneys and more.
+
+Notice the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+وعاء الماء تقرير صحي. أكثرنا لا يقرؤه أبداً.
+
+شرب أكثر بكثير، أو أقل بكثير، إشارة مبكرة للكلى وغيرها.
+
+لاحظي التغيّر مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s69" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s69</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s70.jpg" alt="s70">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Kidney issues touch many senior cats. Caught early, they are managed for years.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The water bowl is a health report. Most of us never read it.
+
+Drinking much more, or much less, is an early flag for kidneys and more.
+
+Notice the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+وعاء الماء تقرير صحي. أكثرنا لا يقرؤه أبداً.
+
+شرب أكثر بكثير، أو أقل بكثير، إشارة مبكرة للكلى وغيرها.
+
+لاحظي التغيّر مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s70" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s70</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s71.jpg" alt="s71">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Drinking much more, or much less, is an early flag for kidneys and more.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The water bowl is a health report. Most of us never read it.
+
+Drinking much more, or much less, is an early flag for kidneys and more.
+
+Notice the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+وعاء الماء تقرير صحي. أكثرنا لا يقرؤه أبداً.
+
+شرب أكثر بكثير، أو أقل بكثير، إشارة مبكرة للكلى وغيرها.
+
+لاحظي التغيّر مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s71" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s71</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s72.jpg" alt="s72">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Notice the change early.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The water bowl is a health report. Most of us never read it.
+
+Drinking much more, or much less, is an early flag for kidneys and more.
+
+Notice the change early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+وعاء الماء تقرير صحي. أكثرنا لا يقرؤه أبداً.
+
+شرب أكثر بكثير، أو أقل بكثير، إشارة مبكرة للكلى وغيرها.
+
+لاحظي التغيّر مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s72" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s72</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s73.jpg" alt="s73">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">A cat that skips food for a full day is not &quot;on a diet.&quot;</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A cat that skips food for a full day is not &quot;on a diet.&quot;
+
+Cats&#x27; livers handle fasting badly. Not eating for 24 hours can turn dangerous.
+
+One skipped day is the line. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطة تمتنع عن الطعام يوماً كاملاً ليست &quot;في حمية&quot;.
+
+كبد القطط لا يتحمّل الصيام. الامتناع عن الأكل 24 ساعة قد يصبح خطراً.
+
+يوم واحد بلا أكل هو الحد. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s73" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s73</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s74.jpg" alt="s74">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Cats&#x27; livers handle fasting badly. Not eating for 24 hours can turn dangerous.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A cat that skips food for a full day is not &quot;on a diet.&quot;
+
+Cats&#x27; livers handle fasting badly. Not eating for 24 hours can turn dangerous.
+
+One skipped day is the line. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطة تمتنع عن الطعام يوماً كاملاً ليست &quot;في حمية&quot;.
+
+كبد القطط لا يتحمّل الصيام. الامتناع عن الأكل 24 ساعة قد يصبح خطراً.
+
+يوم واحد بلا أكل هو الحد. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s74" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s74</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s75.jpg" alt="s75">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Overweight cats are at higher risk. The clock matters more than the cause.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A cat that skips food for a full day is not &quot;on a diet.&quot;
+
+Cats&#x27; livers handle fasting badly. Not eating for 24 hours can turn dangerous.
+
+One skipped day is the line. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطة تمتنع عن الطعام يوماً كاملاً ليست &quot;في حمية&quot;.
+
+كبد القطط لا يتحمّل الصيام. الامتناع عن الأكل 24 ساعة قد يصبح خطراً.
+
+يوم واحد بلا أكل هو الحد. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s75" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s75</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s76.jpg" alt="s76">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">One skipped day is the line.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A cat that skips food for a full day is not &quot;on a diet.&quot;
+
+Cats&#x27; livers handle fasting badly. Not eating for 24 hours can turn dangerous.
+
+One skipped day is the line. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطة تمتنع عن الطعام يوماً كاملاً ليست &quot;في حمية&quot;.
+
+كبد القطط لا يتحمّل الصيام. الامتناع عن الأكل 24 ساعة قد يصبح خطراً.
+
+يوم واحد بلا أكل هو الحد. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s76" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s76</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s77.jpg" alt="s77">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Licking herself bald is not extra cleanliness.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Licking herself bald is not extra cleanliness.
+
+Overgrooming points to itch, pain, or stress. The spot she licks often points to the cause.
+
+Watch the pattern, not the panic. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+لعق فروها حتى الصلع ليس نظافة زائدة.
+
+الإفراط في اللعق يشير إلى حكة أو ألم أو توتر. والمكان الذي تلعقه غالباً يدل على السبب.
+
+راقبي النمط، لا الذعر. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s77" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s77</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s78.jpg" alt="s78">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Photos of the patch, one a week, show whether it grows or heals.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Licking herself bald is not extra cleanliness.
+
+Overgrooming points to itch, pain, or stress. The spot she licks often points to the cause.
+
+Watch the pattern, not the panic. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+لعق فروها حتى الصلع ليس نظافة زائدة.
+
+الإفراط في اللعق يشير إلى حكة أو ألم أو توتر. والمكان الذي تلعقه غالباً يدل على السبب.
+
+راقبي النمط، لا الذعر. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s78" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s78</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s79.jpg" alt="s79">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Overgrooming points to itch, pain, or stress. The spot she licks often points to the cause.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Licking herself bald is not extra cleanliness.
+
+Overgrooming points to itch, pain, or stress. The spot she licks often points to the cause.
+
+Watch the pattern, not the panic. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+لعق فروها حتى الصلع ليس نظافة زائدة.
+
+الإفراط في اللعق يشير إلى حكة أو ألم أو توتر. والمكان الذي تلعقه غالباً يدل على السبب.
+
+راقبي النمط، لا الذعر. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s79" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s79</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s80.jpg" alt="s80">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Watch the pattern, not the panic.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Licking herself bald is not extra cleanliness.
+
+Overgrooming points to itch, pain, or stress. The spot she licks often points to the cause.
+
+Watch the pattern, not the panic. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+لعق فروها حتى الصلع ليس نظافة زائدة.
+
+الإفراط في اللعق يشير إلى حكة أو ألم أو توتر. والمكان الذي تلعقه غالباً يدل على السبب.
+
+راقبي النمط، لا الذعر. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s80" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s80</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s81.jpg" alt="s81">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.
+
+Gradual loss hides under the fluff. Your hands notice before your eyes do.
+
+Her normal, on record. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+القطط الكبيرة لا &quot;تنحف مع العمر&quot; ببساطة. فقدان الوزن نتيجة تستحق الانتباه.
+
+الفقدان التدريجي يختبئ تحت الفرو. يداك تلاحظان قبل عينيك.
+
+معدّلها الطبيعي، مسجّل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s81" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s81</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s82.jpg" alt="s82">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Thyroid, kidneys, teeth. All treatable sooner better than later.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.
+
+Gradual loss hides under the fluff. Your hands notice before your eyes do.
+
+Her normal, on record. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+القطط الكبيرة لا &quot;تنحف مع العمر&quot; ببساطة. فقدان الوزن نتيجة تستحق الانتباه.
+
+الفقدان التدريجي يختبئ تحت الفرو. يداك تلاحظان قبل عينيك.
+
+معدّلها الطبيعي، مسجّل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s82" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s82</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s83.jpg" alt="s83">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Gradual loss hides under the fluff. Your hands notice before your eyes do.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.
+
+Gradual loss hides under the fluff. Your hands notice before your eyes do.
+
+Her normal, on record. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+القطط الكبيرة لا &quot;تنحف مع العمر&quot; ببساطة. فقدان الوزن نتيجة تستحق الانتباه.
+
+الفقدان التدريجي يختبئ تحت الفرو. يداك تلاحظان قبل عينيك.
+
+معدّلها الطبيعي، مسجّل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s83" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s83</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s84.jpg" alt="s84">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Her normal, on record.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Senior cats don&#x27;t &quot;just get thin.&quot; Weight loss is a finding.
+
+Gradual loss hides under the fluff. Your hands notice before your eyes do.
+
+Her normal, on record. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+القطط الكبيرة لا &quot;تنحف مع العمر&quot; ببساطة. فقدان الوزن نتيجة تستحق الانتباه.
+
+الفقدان التدريجي يختبئ تحت الفرو. يداك تلاحظان قبل عينيك.
+
+معدّلها الطبيعي، مسجّل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s84" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s84</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s85.jpg" alt="s85">
+<figcaption><span class="k" style="color:#10B981">CAT &amp; CULTURE</span>
+<span class="en">She slow-blinked at you. That was a love letter.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She slow-blinked at you. That was a love letter.
+
+Slow blinks, a raised tail with a soft hook, kneading paws. All trust.
+
+Learn her language. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+
+الرمش البطيء، ذيل مرفوع بانحناءة ناعمة، عجن بالقوائم. كلها ثقة.
+
+تعلّمي لغتها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s85" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s85</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s86.jpg" alt="s86">
+<figcaption><span class="k" style="color:#10B981">CAT &amp; CULTURE</span>
+<span class="en">Slow blinks, a raised tail with a soft hook, kneading paws. All trust.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She slow-blinked at you. That was a love letter.
+
+Slow blinks, a raised tail with a soft hook, kneading paws. All trust.
+
+Learn her language. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+
+الرمش البطيء، ذيل مرفوع بانحناءة ناعمة، عجن بالقوائم. كلها ثقة.
+
+تعلّمي لغتها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s86" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s86</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s87.jpg" alt="s87">
+<figcaption><span class="k" style="color:#10B981">CAT &amp; CULTURE</span>
+<span class="en">Blink slowly back. Many cats return it, some cross the room to you.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She slow-blinked at you. That was a love letter.
+
+Slow blinks, a raised tail with a soft hook, kneading paws. All trust.
+
+Learn her language. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+
+الرمش البطيء، ذيل مرفوع بانحناءة ناعمة، عجن بالقوائم. كلها ثقة.
+
+تعلّمي لغتها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s87" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s87</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s88.jpg" alt="s88">
+<figcaption><span class="k" style="color:#10B981">CAT &amp; CULTURE</span>
+<span class="en">Learn her language.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">She slow-blinked at you. That was a love letter.
+
+Slow blinks, a raised tail with a soft hook, kneading paws. All trust.
+
+Learn her language. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أغمضت عينيها ببطء نحوك. كانت تلك رسالة حب.
+
+الرمش البطيء، ذيل مرفوع بانحناءة ناعمة، عجن بالقوائم. كلها ثقة.
+
+تعلّمي لغتها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s88" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s88</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s89.jpg" alt="s89">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">The bouquet on your table can be lethal to her.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The bouquet on your table can be lethal to her.
+
+Lilies are deadly to cats. Even pollen on fur, licked off later, harms kidneys.
+
+Know the list before you need it. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+باقة الزهور على طاولتك قد تكون قاتلة لها.
+
+الزنابق قاتلة للقطط. حتى حبوب اللقاح على الفرو، إذا لعقتها لاحقاً، تضر الكلى.
+
+احفظي القائمة قبل أن تحتاجيها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s89" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s89</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s90.jpg" alt="s90">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Household risks: floor cleaners, human painkillers, onions and garlic, essential oils.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The bouquet on your table can be lethal to her.
+
+Lilies are deadly to cats. Even pollen on fur, licked off later, harms kidneys.
+
+Know the list before you need it. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+باقة الزهور على طاولتك قد تكون قاتلة لها.
+
+الزنابق قاتلة للقطط. حتى حبوب اللقاح على الفرو، إذا لعقتها لاحقاً، تضر الكلى.
+
+احفظي القائمة قبل أن تحتاجيها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s90" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s90</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s91.jpg" alt="s91">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Lilies are deadly to cats. Even pollen on fur, licked off later, harms kidneys.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The bouquet on your table can be lethal to her.
+
+Lilies are deadly to cats. Even pollen on fur, licked off later, harms kidneys.
+
+Know the list before you need it. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+باقة الزهور على طاولتك قد تكون قاتلة لها.
+
+الزنابق قاتلة للقطط. حتى حبوب اللقاح على الفرو، إذا لعقتها لاحقاً، تضر الكلى.
+
+احفظي القائمة قبل أن تحتاجيها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s91" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s91</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s92.jpg" alt="s92">
+<figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
+<span class="en">Know the list before you need it.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">The bouquet on your table can be lethal to her.
+
+Lilies are deadly to cats. Even pollen on fur, licked off later, harms kidneys.
+
+Know the list before you need it. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+باقة الزهور على طاولتك قد تكون قاتلة لها.
+
+الزنابق قاتلة للقطط. حتى حبوب اللقاح على الفرو، إذا لعقتها لاحقاً، تضر الكلى.
+
+احفظي القائمة قبل أن تحتاجيها. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s92" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s92</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s93.jpg" alt="s93">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">&quot;Cat breath&quot; that clears the room is a medical sign.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">&quot;Cat breath&quot; that clears the room is a medical sign.
+
+Most cats show dental disease by age 3. It hurts quietly and daily.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+&quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+
+أكثر القطط تُصاب بأمراض الأسنان قبل عمر 3 سنوات. تؤلم بصمت وكل يوم.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s93" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s93</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s94.jpg" alt="s94">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Dental pain steals appetite. Many &quot;picky eaters&quot; are actually sore.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">&quot;Cat breath&quot; that clears the room is a medical sign.
+
+Most cats show dental disease by age 3. It hurts quietly and daily.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+&quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+
+أكثر القطط تُصاب بأمراض الأسنان قبل عمر 3 سنوات. تؤلم بصمت وكل يوم.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s94" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s94</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s95.jpg" alt="s95">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Most cats show dental disease by age 3. It hurts quietly and daily.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">&quot;Cat breath&quot; that clears the room is a medical sign.
+
+Most cats show dental disease by age 3. It hurts quietly and daily.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+&quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+
+أكثر القطط تُصاب بأمراض الأسنان قبل عمر 3 سنوات. تؤلم بصمت وكل يوم.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s95" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s95</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s96.jpg" alt="s96">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Catch the early signs.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">&quot;Cat breath&quot; that clears the room is a medical sign.
+
+Most cats show dental disease by age 3. It hurts quietly and daily.
+
+Catch the early signs. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+&quot;رائحة فم القطط&quot; النفّاذة علامة طبية.
+
+أكثر القطط تُصاب بأمراض الأسنان قبل عمر 3 سنوات. تؤلم بصمت وكل يوم.
+
+التقطي العلامات المبكرة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s96" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s96</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s97.jpg" alt="s97">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">A little curtain across her eye? That&#x27;s the third eyelid.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A little curtain across her eye? That&#x27;s the third eyelid.
+
+Normally you never see it. Visible while awake often signals illness or pain.
+
+Small signs, seen early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+غشاء صغير يغطي عينها؟ هذا هو الجفن الثالث.
+
+في الطبيعي لا يظهر أبداً. ظهوره وهي مستيقظة غالباً يشير إلى مرض أو ألم.
+
+علامات صغيرة، تُرى مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s97" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s97</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s98.jpg" alt="s98">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">With squinting, discharge, or low energy, book the vet the same week.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A little curtain across her eye? That&#x27;s the third eyelid.
+
+Normally you never see it. Visible while awake often signals illness or pain.
+
+Small signs, seen early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+غشاء صغير يغطي عينها؟ هذا هو الجفن الثالث.
+
+في الطبيعي لا يظهر أبداً. ظهوره وهي مستيقظة غالباً يشير إلى مرض أو ألم.
+
+علامات صغيرة، تُرى مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s98" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s98</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s99.jpg" alt="s99">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Normally you never see it. Visible while awake often signals illness or pain.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A little curtain across her eye? That&#x27;s the third eyelid.
+
+Normally you never see it. Visible while awake often signals illness or pain.
+
+Small signs, seen early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+غشاء صغير يغطي عينها؟ هذا هو الجفن الثالث.
+
+في الطبيعي لا يظهر أبداً. ظهوره وهي مستيقظة غالباً يشير إلى مرض أو ألم.
+
+علامات صغيرة، تُرى مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s99" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s99</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s100.jpg" alt="s100">
+<figcaption><span class="k" style="color:#F59E0B">EDUCATION</span>
+<span class="en">Small signs, seen early.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">A little curtain across her eye? That&#x27;s the third eyelid.
+
+Normally you never see it. Visible while awake often signals illness or pain.
+
+Small signs, seen early. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+غشاء صغير يغطي عينها؟ هذا هو الجفن الثالث.
+
+في الطبيعي لا يظهر أبداً. ظهوره وهي مستيقظة غالباً يشير إلى مرض أو ألم.
+
+علامات صغيرة، تُرى مبكراً. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s100" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s100</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s101.jpg" alt="s101">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">30 seconds a day. That&#x27;s the whole routine.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">30 seconds a day. That&#x27;s the whole routine.
+
+Ate well? Drank? Litter normal? Mood usual? Four taps, done.
+
+Learns her normal. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+30 ثانية في اليوم. هذا هو الروتين كله.
+
+أكلت جيداً؟ شربت؟ الرمل طبيعي؟ المزاج معتاد؟ أربع لمسات وانتهيت.
+
+يتعلّم معدّلها الطبيعي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s101" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s101</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s102.jpg" alt="s102">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Ate well? Drank? Litter normal? Mood usual? Four taps, done.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">30 seconds a day. That&#x27;s the whole routine.
+
+Ate well? Drank? Litter normal? Mood usual? Four taps, done.
+
+Learns her normal. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+30 ثانية في اليوم. هذا هو الروتين كله.
+
+أكلت جيداً؟ شربت؟ الرمل طبيعي؟ المزاج معتاد؟ أربع لمسات وانتهيت.
+
+يتعلّم معدّلها الطبيعي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s102" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s102</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s103.jpg" alt="s103">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">When something drifts, you see it in the trend, not in a crisis.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">30 seconds a day. That&#x27;s the whole routine.
+
+Ate well? Drank? Litter normal? Mood usual? Four taps, done.
+
+Learns her normal. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+30 ثانية في اليوم. هذا هو الروتين كله.
+
+أكلت جيداً؟ شربت؟ الرمل طبيعي؟ المزاج معتاد؟ أربع لمسات وانتهيت.
+
+يتعلّم معدّلها الطبيعي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s103" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s103</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s104.jpg" alt="s104">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Learns her normal.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">30 seconds a day. That&#x27;s the whole routine.
+
+Ate well? Drank? Litter normal? Mood usual? Four taps, done.
+
+Learns her normal. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+30 ثانية في اليوم. هذا هو الروتين كله.
+
+أكلت جيداً؟ شربت؟ الرمل طبيعي؟ المزاج معتاد؟ أربع لمسات وانتهيت.
+
+يتعلّم معدّلها الطبيعي. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s104" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s104</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s105.jpg" alt="s105">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Your vet&#x27;s first question is always &quot;since when?&quot;</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Your vet&#x27;s first question is always &quot;since when?&quot;
+
+Memory blurs under worry. A simple log answers in dates, not guesses.
+
+Walk in with the answer. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أول سؤال يسأله الطبيب دائماً: &quot;منذ متى؟&quot;
+
+الذاكرة تتشوّش مع القلق. سجل بسيط يجيب بتواريخ، لا تخمينات.
+
+ادخلي وعندك الإجابة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s105" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s105</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s106.jpg" alt="s106">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Weight, appetite, litter, behavior. Trends your vet can actually read.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Your vet&#x27;s first question is always &quot;since when?&quot;
+
+Memory blurs under worry. A simple log answers in dates, not guesses.
+
+Walk in with the answer. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أول سؤال يسأله الطبيب دائماً: &quot;منذ متى؟&quot;
+
+الذاكرة تتشوّش مع القلق. سجل بسيط يجيب بتواريخ، لا تخمينات.
+
+ادخلي وعندك الإجابة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s106" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s106</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s107.jpg" alt="s107">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Memory blurs under worry. A simple log answers in dates, not guesses.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Your vet&#x27;s first question is always &quot;since when?&quot;
+
+Memory blurs under worry. A simple log answers in dates, not guesses.
+
+Walk in with the answer. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أول سؤال يسأله الطبيب دائماً: &quot;منذ متى؟&quot;
+
+الذاكرة تتشوّش مع القلق. سجل بسيط يجيب بتواريخ، لا تخمينات.
+
+ادخلي وعندك الإجابة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s107" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s107</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s108.jpg" alt="s108">
+<figcaption><span class="k" style="color:#10B981">PRODUCT</span>
+<span class="en">Walk in with the answer.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Your vet&#x27;s first question is always &quot;since when?&quot;
+
+Memory blurs under worry. A simple log answers in dates, not guesses.
+
+Walk in with the answer. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+أول سؤال يسأله الطبيب دائماً: &quot;منذ متى؟&quot;
+
+الذاكرة تتشوّش مع القلق. سجل بسيط يجيب بتواريخ، لا تخمينات.
+
+ادخلي وعندك الإجابة. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s108" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s108</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s109.jpg" alt="s109">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Her health diary never leaves your phone.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Her health diary never leaves your phone.
+
+No account. No cloud. No ads reading your worries back to you.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+دفتر صحتها لا يغادر هاتفك أبداً.
+
+لا حساب. لا سحابة. لا إعلانات تعيد قراءة قلقك عليك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s109" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s109</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s110.jpg" alt="s110">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Delete the app and the data is gone. Yours means yours.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Her health diary never leaves your phone.
+
+No account. No cloud. No ads reading your worries back to you.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+دفتر صحتها لا يغادر هاتفك أبداً.
+
+لا حساب. لا سحابة. لا إعلانات تعيد قراءة قلقك عليك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s110" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s110</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s111.jpg" alt="s111">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">No account. No cloud. No ads reading your worries back to you.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Her health diary never leaves your phone.
+
+No account. No cloud. No ads reading your worries back to you.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+دفتر صحتها لا يغادر هاتفك أبداً.
+
+لا حساب. لا سحابة. لا إعلانات تعيد قراءة قلقك عليك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s111" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s111</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s112.jpg" alt="s112">
+<figcaption><span class="k" style="color:#10B981">TRUST</span>
+<span class="en">Private by design.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Her health diary never leaves your phone.
+
+No account. No cloud. No ads reading your worries back to you.
+
+Private by design. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+دفتر صحتها لا يغادر هاتفك أبداً.
+
+لا حساب. لا سحابة. لا إعلانات تعيد قراءة قلقك عليك.
+
+خاصّة بالتصميم. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s112" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s112</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s113.jpg" alt="s113">
+<figcaption><span class="k" style="color:#10B981">EDUCATION</span>
+<span class="en">Indoor cats in the Gulf live years longer. Boredom is the tax.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Indoor cats in the Gulf live years longer. Boredom is the tax.
+
+Heat, traffic, and strays make outdoors risky here. Indoors is the kind choice.
+
+A rich life, indoors. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطط المنازل في الخليج تعيش سنوات أطول. والملل هو الضريبة.
+
+الحر والسيارات وقطط الشوارع تجعل الخارج خطراً هنا. البقاء في المنزل هو الخيار الرحيم.
+
+حياة غنية، داخل المنزل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s113" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s113</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s114.jpg" alt="s114">
+<figcaption><span class="k" style="color:#10B981">EDUCATION</span>
+<span class="en">Window perches, boxes, and food puzzles turn the flat into territory.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Indoor cats in the Gulf live years longer. Boredom is the tax.
+
+Heat, traffic, and strays make outdoors risky here. Indoors is the kind choice.
+
+A rich life, indoors. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطط المنازل في الخليج تعيش سنوات أطول. والملل هو الضريبة.
+
+الحر والسيارات وقطط الشوارع تجعل الخارج خطراً هنا. البقاء في المنزل هو الخيار الرحيم.
+
+حياة غنية، داخل المنزل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s114" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s114</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s115.jpg" alt="s115">
+<figcaption><span class="k" style="color:#10B981">EDUCATION</span>
+<span class="en">Heat, traffic, and strays make outdoors risky here. Indoors is the kind choice.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Indoor cats in the Gulf live years longer. Boredom is the tax.
+
+Heat, traffic, and strays make outdoors risky here. Indoors is the kind choice.
+
+A rich life, indoors. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطط المنازل في الخليج تعيش سنوات أطول. والملل هو الضريبة.
+
+الحر والسيارات وقطط الشوارع تجعل الخارج خطراً هنا. البقاء في المنزل هو الخيار الرحيم.
+
+حياة غنية، داخل المنزل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s115" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s115</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s116.jpg" alt="s116">
+<figcaption><span class="k" style="color:#10B981">EDUCATION</span>
+<span class="en">A rich life, indoors.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">Indoor cats in the Gulf live years longer. Boredom is the tax.
+
+Heat, traffic, and strays make outdoors risky here. Indoors is the kind choice.
+
+A rich life, indoors. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+قطط المنازل في الخليج تعيش سنوات أطول. والملل هو الضريبة.
+
+الحر والسيارات وقطط الشوارع تجعل الخارج خطراً هنا. البقاء في المنزل هو الخيار الرحيم.
+
+حياة غنية، داخل المنزل. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s116" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s116</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s117.jpg" alt="s117">
+<figcaption><span class="k" style="color:#F43F5E">PRODUCT</span>
+<span class="en">At 2 AM with a sick cat, you don&#x27;t want to be Googling.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">At 2 AM with a sick cat, you don&#x27;t want to be Googling.
+
+The emergency card is ready before you need it: signs, first steps, what not to do.
+
+Ready before the emergency. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+في الثانية فجراً مع قطة مريضة، لا تريدين البحث في Google.
+
+بطاقة الطوارئ جاهزة قبل الحاجة: العلامات، الخطوات الأولى، وما يجب تجنّبه.
+
+جاهزة قبل الطارئ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s117" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s117</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s118.jpg" alt="s118">
+<figcaption><span class="k" style="color:#F43F5E">PRODUCT</span>
+<span class="en">Fully offline. Airports, deserts, basements. It opens anywhere, instantly.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">At 2 AM with a sick cat, you don&#x27;t want to be Googling.
+
+The emergency card is ready before you need it: signs, first steps, what not to do.
+
+Ready before the emergency. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+في الثانية فجراً مع قطة مريضة، لا تريدين البحث في Google.
+
+بطاقة الطوارئ جاهزة قبل الحاجة: العلامات، الخطوات الأولى، وما يجب تجنّبه.
+
+جاهزة قبل الطارئ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s118" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s118</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s119.jpg" alt="s119">
+<figcaption><span class="k" style="color:#F43F5E">PRODUCT</span>
+<span class="en">It routes you to a vet fast, with the notes that matter already in hand.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">At 2 AM with a sick cat, you don&#x27;t want to be Googling.
+
+The emergency card is ready before you need it: signs, first steps, what not to do.
+
+Ready before the emergency. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+في الثانية فجراً مع قطة مريضة، لا تريدين البحث في Google.
+
+بطاقة الطوارئ جاهزة قبل الحاجة: العلامات، الخطوات الأولى، وما يجب تجنّبه.
+
+جاهزة قبل الطارئ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s119" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s119</span></div></figcaption></figure><figure class="card">
+<img loading="lazy" src="assets/statics/s120.jpg" alt="s120">
+<figcaption><span class="k" style="color:#F43F5E">PRODUCT</span>
+<span class="en">Ready before the emergency.</span><span class="sch none">unscheduled · next runway</span>
+<textarea readonly rows="3">At 2 AM with a sick cat, you don&#x27;t want to be Googling.
+
+The emergency card is ready before you need it: signs, first steps, what not to do.
+
+Ready before the emergency. Free on the App Store.
+
+Save this, or send it to a cat person.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
+
+---
+
+في الثانية فجراً مع قطة مريضة، لا تريدين البحث في Google.
+
+بطاقة الطوارئ جاهزة قبل الحاجة: العلامات، الخطوات الأولى، وما يجب تجنّبه.
+
+جاهزة قبل الطارئ. مجاناً على App Store.
+
+احفظيه، وشاركيه مع محبّي القطط.
+
+#cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط</textarea>
+<div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="s120" data-def="todecide"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select><span class="id">s120</span></div></figcaption></figure></div></div>
+<h2>Batch 1 · Reels (20)</h2><div class="wrap"><div class="grid"><figure class="card vcard">
 <video controls playsinline preload="metadata" src="assets/videos/v01-p7.mp4"></video>
 <figcaption><span class="en">v01-p7</span><span class="sch">📅 Mon 06 Jul · 9:30 PM BD / 6:30 PM Gulf</span>
 <textarea readonly rows="2">Your cat can&#x27;t sweat like you can.  قطتك لا تتعرّق كما تتعرّقين.
@@ -138,7 +1799,7 @@ a{color:#7fd3c7}footer{max-width:1500px;margin:0 auto;padding:20px 30px 60px;col
 <textarea readonly rows="2">Private by design.  خاصّة بالتصميم.
 #cathealth #catcare #cats #catsofinstagram #petcare #قطط</textarea>
 <div class="row"><button onclick="cp(this)">Copy</button><select class="st" data-k="v20-private" data-def="scheduled"><option value="posted">Posted</option><option value="scheduled">Scheduled</option><option value="todecide">Yet to decide</option></select></div></figcaption></figure></div></div>
-<h2>Statics (60) — caption + schedule + status</h2><div class="wrap"><div class="grid"><figure class="card">
+<h2>Batch 1 · Statics (60)</h2><div class="wrap"><div class="grid"><figure class="card">
 <img loading="lazy" src="assets/statics/s01.jpg" alt="s01">
 <figcaption><span class="k" style="color:#F43F5E">EDUCATION</span>
 <span class="en">Your cat can&#x27;t sweat like you can.</span><span class="sch">📅 Sun 12 Jul · 12:00 PM BD / 9:00 AM Gulf</span>
@@ -152,7 +1813,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قطتك لا تتعرّق كما تتعرّقين.
 
@@ -177,7 +1838,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قطتك لا تتعرّق كما تتعرّقين.
 
@@ -202,7 +1863,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قطتك لا تتعرّق كما تتعرّقين.
 
@@ -227,7 +1888,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قطتك لا تتعرّق كما تتعرّقين.
 
@@ -253,7 +1914,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
 
@@ -280,7 +1941,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
 
@@ -307,7 +1968,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
 
@@ -334,7 +1995,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 إن كان قطّك الذكر يدخل ويخرج من صندوق الرمل اليوم، لا تنتظري الغد.
 
@@ -360,7 +2021,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
 
@@ -385,7 +2046,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
 
@@ -410,7 +2071,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
 
@@ -435,7 +2096,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 قبل أن تنشري الصورة في مجموعة القطط، اسألي هِرّة أولاً.
 
@@ -460,7 +2121,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
 
@@ -485,7 +2146,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
 
@@ -510,7 +2171,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
 
@@ -535,7 +2196,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 ليس كل صباح فيه كرة شعر يستدعي زيارة الطبيب.
 
@@ -560,7 +2221,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 القطة الجديدة ليست مفتاح إضاءة.
 
@@ -585,7 +2246,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 القطة الجديدة ليست مفتاح إضاءة.
 
@@ -610,7 +2271,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 القطة الجديدة ليست مفتاح إضاءة.
 
@@ -635,7 +2296,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 القطة الجديدة ليست مفتاح إضاءة.
 
@@ -660,7 +2321,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 صحّة قطتك ليست عرضاً للمشاهدة.
 
@@ -685,7 +2346,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 صحّة قطتك ليست عرضاً للمشاهدة.
 
@@ -710,7 +2371,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 صحّة قطتك ليست عرضاً للمشاهدة.
 
@@ -735,7 +2396,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 صحّة قطتك ليست عرضاً للمشاهدة.
 
@@ -760,7 +2421,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الأرض التي تمشي عليها قد تحرق.
 
@@ -785,7 +2446,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الأرض التي تمشي عليها قد تحرق.
 
@@ -810,7 +2471,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الأرض التي تمشي عليها قد تحرق.
 
@@ -835,7 +2496,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الأرض التي تمشي عليها قد تحرق.
 
@@ -860,7 +2521,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 خرافتان حول القطة المنزلية ولقاحاتها.
 
@@ -885,7 +2546,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 خرافتان حول القطة المنزلية ولقاحاتها.
 
@@ -910,7 +2571,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 خرافتان حول القطة المنزلية ولقاحاتها.
 
@@ -935,7 +2596,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 خرافتان حول القطة المنزلية ولقاحاتها.
 
@@ -960,7 +2621,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أنتِ تفهمين بالفعل كيف تعمل هِرّة.
 
@@ -985,7 +2646,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أنتِ تفهمين بالفعل كيف تعمل هِرّة.
 
@@ -1010,7 +2671,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أنتِ تفهمين بالفعل كيف تعمل هِرّة.
 
@@ -1035,7 +2696,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أنتِ تفهمين بالفعل كيف تعمل هِرّة.
 
@@ -1060,7 +2721,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
 
@@ -1085,7 +2746,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
 
@@ -1110,7 +2771,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
 
@@ -1135,7 +2796,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 لديكِ حلقة تقيس خطواتك. وهي تستحق واحدة أيضًا.
 
@@ -1160,7 +2821,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 «هي لا تخرج أبدًا، إذًا هي بأمان.»
 
@@ -1185,7 +2846,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 «هي لا تخرج أبدًا، إذًا هي بأمان.»
 
@@ -1210,7 +2871,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 «هي لا تخرج أبدًا، إذًا هي بأمان.»
 
@@ -1235,7 +2896,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 «هي لا تخرج أبدًا، إذًا هي بأمان.»
 
@@ -1260,7 +2921,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
 
@@ -1285,7 +2946,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
 
@@ -1310,7 +2971,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
 
@@ -1335,7 +2996,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 بدا البلاط عاديًا. لكنه كان نارًا تحت قدميها.
 
@@ -1360,7 +3021,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
 
@@ -1385,7 +3046,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
 
@@ -1410,7 +3071,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
 
@@ -1435,7 +3096,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 أمران يخطئ فيهما الملّاك حول رائحة فم القطة.
 
@@ -1460,7 +3121,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 هي لا تتباطأ مع التقدّم في العمر فحسب.
 
@@ -1485,7 +3146,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 هي لا تتباطأ مع التقدّم في العمر فحسب.
 
@@ -1510,7 +3171,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 هي لا تتباطأ مع التقدّم في العمر فحسب.
 
@@ -1535,7 +3196,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 هي لا تتباطأ مع التقدّم في العمر فحسب.
 
@@ -1560,7 +3221,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
 
@@ -1585,7 +3246,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
 
@@ -1610,7 +3271,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
 
@@ -1635,7 +3296,7 @@ Save this, or send it to a cat person.
 
 #cathealth #catcare #cats #catsofinstagram #petcare #catlovers #قطط
 
-———
+---
 
 الماء الزائد في الوعاء ليس دائماً بسبب الحرّ فقط.
 
